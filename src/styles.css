@@ -1,0 +1,87 @@
+.c-sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.backdrop-blur-md {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.cloud {
+    opacity: 0.85;
+    will-change: transform, opacity;
+    animation: fade-in 20s ease-out forwards;
+}
+
+.cloud-1 {
+    top: 10%;
+    width: 50%;
+    animation: float-slow 1000s linear infinite;
+    transform: translateX(10vw);
+}
+
+.cloud-2 {
+    top: 45%;
+    width: 40%;
+    animation: float-medium 300s linear infinite;
+    transform: translateX(60vw);
+}
+
+.cloud-3 {
+    top: 75%;
+    width: 35%;
+    animation: float-fast 50s linear infinite;
+    transform: translateX(75vw);
+}
+
+@keyframes float-slow {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200vw);
+    }
+}
+
+@keyframes float-medium {
+    from {
+        transform: translateX(60vw);
+    }
+    to {
+        transform: translateX(-40vw);
+    }
+}
+
+@keyframes float-fast {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(200vw);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+:root {
+    --nav-height: 0px;
+}
+
+.calc-height {
+    min-height: calc(100vh - var(--nav-height));
+}
+
+
+  
+  
+  
+  

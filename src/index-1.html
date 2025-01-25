@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html data-theme="night" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./output.css" rel="stylesheet" />
+		<link href="./styles.css" rel="stylesheet" />
+		<title>Adam Thomas - Web Developer</title>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta name="language" content="English" />
+		<meta name="description" content="Adam Thomas is a web developer with a passion for creating user-friendly and efficient websites." />
+		<meta name="keywords" content="Adam Thomas, web developer, Utah State University, USU, web development, project management, user experience, user interface, UX/UI, HTML, CSS, JavaScript" />
+		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body class="overflow-hidden">
+		<div class="navbar bg-base-100 fixed top-0 z-50 w-full lg:opacity-0 lg:pointer-events-none transition-opacity duration-300" id="navbar">
+			<div class="navbar-start">
+				<div class="dropdown">
+					<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+						</svg>
+					</div>
+					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+						<li><a onclick="scrollToSection('qualifications')">Qualifications</a></li>
+						<li><a onclick="scrollToSection('my-work')">My Work</a></li>
+						<li><a onclick="scrollToSection('about-me')">About Me</a></li>
+					</ul>
+				</div>
+				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl">Adam Thomas</a>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1">
+					<li><a onclick="scrollToSection('qualifications')" class="desktop-nav-link navbar-link" data-section="qualifications">Qualifications</a></li>
+					<li><a onclick="scrollToSection('my-work')" class="desktop-nav-link navbar-link" data-section="my-work">My Work</a></li>
+					<li><a onclick="scrollToSection('about-me')" class="desktop-nav-link navbar-link" data-section="about-me">About Me</a></li>
+				</ul>
+			</div>
+			<div class="navbar-end pr-4">
+				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-solid fa-envelope"></i></a>
+				<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/adamsthomas48" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.instagram.com/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="overflow-y-scroll scroll-smooth h-screen" id="scroll-container">
+			<header id="home" class="h-screen bg-cover bg-center flex flex-col justify-center items-center relative overflow-hidden" style="background-image: url('/assets/mountains.jpg')">
+				<div class="cloud-container absolute inset-0 pointer-events-none">
+					<img src="/assets/cloud-1.png" class="cloud cloud-1 absolute" alt="" style="z-index: 4" />
+				</div>
+
+				<div class="absolute inset-0 pointer-events-none" style="z-index: 5">
+					<img src="/assets/mountains-foreground.png" class="w-full h-full object-cover object-bottom" alt="Mountain foreground" />
+				</div>
+
+				<div class="cloud-container absolute inset-0 pointer-events-none" style="z-index: 6">
+					<img src="/assets/cloud-2.png" class="cloud cloud-2 absolute" alt="" />
+					<!-- <img src="/assets/cloud-1.png" class="cloud cloud-3 absolute" alt=""> -->
+				</div>
+
+				<div class="grid grid-cols-6 w-full items-center px-4 lg:px-0" style="z-index: 10">
+					<div class="col-span-1 bg-white rounded-full h-1 ml-10 -mr-16 z-10 hidden lg:block"></div>
+					<div class="col-span-6 lg:col-span-4 z-0">
+						<div class="bg-white/10 backdrop-blur rounded-lg py-10 w-full text-center">
+							<h1 class="text-6xl font-bold text-white">Adam Thomas</h1>
+							<p class="text-xl text-white">Web Developer & UX/UI Designer</p>
+						</div>
+					</div>
+					<div class="col-span-1 bg-white rounded-full h-1 mr-10 -ml-16 z-10 hidden lg:block"></div>
+				</div>
+				<div id="nav-buttons" class="grid md:grid-cols-3 sm:grid-cols-1 gap-4 -mt-4 z-40 lg:w-1/2 w-full px-8 lg:px-0 mx-auto relative">
+					<div>
+						<button onclick="scrollToSection('qualifications')" class="desktop-nav-link btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning transition-all duration-300" data-section="qualifications">
+							<i class="fa-solid fa-award"></i> Qualifications
+						</button>
+					</div>
+					<div>
+						<button onclick="scrollToSection('my-work')" class="desktop-nav-link btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning transition-all duration-300" data-section="my-work"><i class="fa-solid fa-code"></i> My Work</button>
+					</div>
+					<div>
+						<button onclick="scrollToSection('about-me')" class="desktop-nav-link btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning transition-all duration-300" data-section="about-me"><i class="fa-solid fa-user"></i> About Me</button>
+					</div>
+				</div>
+			</header>
+			<div id="qualifications" class="calc-height bg-primary flex pt-10 lg:pt-0 flex flex-col justify-center items-center">
+				<div class="container px-4 lg:px-0 mx-auto h-full py-10">
+					<h2 class="text-white text-4xl font-bold text-center">Qualifications</h2>
+					<div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-10 w-full">
+						<div class="col-span-1">
+							<div class="card bg-base-100 pb-10 w-100 mb-6">
+								<div class="card-body">
+									<h2 class="text-white text-4xl font-bold mt-4">Current Roles</h2>
+									<h3 class="card-title text-2xl text-warning">Web Development & UX/UI Manager</h3>
+									<div>
+										<p class="text-xl mb-2">Utah State University, IT Web Team</p>
+										<p>Oversee the direct web support and design of contracted departments and units across campus. Provide insight on best practices in web design and accessibility. Organize and manage large scale projects including site build outs and site redesigns.</p>
+									</div>
+
+									<h3 class="card-title text-2xl text-warning mt-6">Adjunct Instructor | Intro to Web Dev & UX/UI</h3>
+
+									<div>
+										<p class="text-xl mb-2">Utah State Unversity, Huntsman School of Business</p>
+										<p>Create content and lectures covering the basics of web development (HTML, CSS & JavaScript) as well as design principles to create a strong UX/UI for websites. Explain web accessibility, why it's important and how to create accessible web pages.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-span-1">
+							<h3 class="text-white text-4xl font-bold mb-6 mt-4">Languages & Frameworks</h3>
+							<div class="flex flex-row gap-3 flex-wrap">
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">HTML</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">CSS</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">JavaScript</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">React</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">SQL</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">Node.js</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">PHP</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">Python</h4>
+								</div>
+
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">Vue</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">C++</h4>
+								</div>
+								<div class="bg-white rounded-lg p-4">
+									<h4 class="text-warning text-2xl font-bold">Java</h4>
+								</div>
+							</div>
+							<h3 class="text-white text-4xl font-bold mt-10 mb-6">Certifications</h3>
+
+							<div class="bg-white rounded-lg">
+								<div class="flex flex-row">
+									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
+										<i class="fa-solid fa-award text-base-100 text-2xl"></i>
+									</div>
+
+									<h3 class="text-base-100 text-2xl font-bold p-4">UX/UI Certification - Nielsen Norman Group</h3>
+								</div>
+							</div>
+							<div class="bg-white rounded-lg mt-4">
+								<div class="flex flex-row">
+									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
+										<i class="fa-solid fa-award text-base-100 text-2xl"></i>
+									</div>
+
+									<h3 class="text-base-100 text-2xl font-bold p-4">Web Accessibility Certification - WebAIM</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="my-work" class="calc-height bg-white pt-10 lg:pt-0 flex flex-col justify-center items-center">
+				<div class="container py-4 lg:py-10 px-4 lg:px-0 mx-auto">
+					<h2 class="text-primary text-4xl font-bold text-center mb-6">My Work</h2>
+					<div class="grid grid-cols-3 gap-4 w-full mb-10">
+						<div class="col-span-3 md:col-span-1">
+							<div class="bg-[url('/assets/library.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
+								<a href="https://www.gradschool.usu.edu/" target="_blank">
+									<div class="bg-gradient-to-t from-warning/80 from-10% to-white/0 to-50% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
+										<p class="text-white">Utah State University</p>
+										<h3 class="text-white text-4xl font-bold">School of Graduate Studies</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-span-3 md:col-span-1">
+							<div class="bg-[url('/assets/first-day.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
+								<a href="https://www.usu.edu/orientation/" target="_blank">
+									<div class="bg-gradient-to-t from-primary/80 from-15% to-white/0 to-60% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
+										<p class="text-white">Utah State University</p>
+										<h3 class="text-white text-4xl font-bold">Orientation</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-span-3 md:col-span-1">
+							<div class="bg-[url('/assets/wellness-hiking.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
+								<a href="https://www.usu.edu/hr/wellness/" target="_blank">
+									<div class="bg-gradient-to-t from-base-100/95 from-10% to-white/0 to-50% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
+										<p class="text-white">Utah State University</p>
+										<h3 class="text-white text-4xl font-bold">Wellness</h3>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="about-me" class="calc-height bg-primary pt-10 lg:pt-0 flex flex-col justify-center items-center">
+				<div class="container py-4 lg:py-10 px-4 lg:px-0 mx-auto">
+					<div class="grid grid-cols-3 gap-8 w-full">
+						<div class="col-span-3 md:col-span-2 md:order-2 flex flex-col justify-center">
+							<h2 class="text-white text-4xl font-bold mb-4">About Me</h2>
+							<p class="text-white text-xl mb-4">
+								I'm Adam Thomas, a programmer from Austin, Texas, with a passion for blending creativity and technology. My journey into web development began with photography, a hobby that taught me to appreciate composition, detail, and storytelling. That same passion for
+								creativity naturally transitioned into designing and building websites, where I could bring ideas to life in a whole new way.
+							</p>
+							<p class="text-white text-xl">
+								Beyond web design, I'm an avid fan of hockey and Formula 1. There's something about the precision, strategy, and excitement of these sports that resonates with me and inspires my work. Whether it's capturing the perfect layout or coding something dynamic, I strive for
+								the same energy and attention to detail.
+							</p>
+							<div class="flex flex-row gap-4 mt-4">
+								<a href="mailto:adamthomas.atx@gmail.com" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-solid fa-envelope"></i></a>
+								<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-linkedin"></i></a>
+								<a href="https://github.com/adamsthomas48" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-github"></i></a>
+								<a href="https://www.instagram.com/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-instagram"></i></a>
+							</div>
+						</div>
+						<div class="col-span-3 md:col-span-1 md:order-1">
+							<img src="/assets/adam-thomas-headshot-square.jpg" alt="Adam Thomas" class="w-full h-full object-cover rounded-full" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
