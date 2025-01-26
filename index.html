@@ -3,14 +3,15 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="./output.css" rel="stylesheet" />
-		<link href="./styles.css" rel="stylesheet" />
+		<link href="/src/output.css" rel="stylesheet" />
+		<link href="/src/styles.css" rel="stylesheet" />
 		<title>Adam Thomas - Web Developer</title>
 		<meta http-equiv="Content-Language" content="en" />
 		<meta name="language" content="English" />
 		<meta name="description" content="Adam Thomas is a web developer with a passion for creating user-friendly and efficient websites." />
 		<meta name="keywords" content="Adam Thomas, web developer, Utah State University, USU, web development, project management, user experience, user interface, UX/UI, HTML, CSS, JavaScript" />
 		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
+		<link rel="icon" href="/assets/at-logo-blue-square.png" />
 	</head>
 
 	<body class="overflow-hidden">
@@ -28,7 +29,8 @@
 						<li><a onclick="scrollToSection('about-me')">About Me</a></li>
 					</ul>
 				</div>
-				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl">Adam Thomas</a>
+				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-blue.png" alt="Adam Thomas Logo" width="30px" /></a>
+				
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1">
@@ -83,7 +85,7 @@
 					</div>
 				</div>
 			</header>
-			<div id="qualifications" class="calc-height bg-primary flex pt-10 lg:pt-0 flex flex-col justify-center items-center">
+			<div id="qualifications" class="calc-height bg-primary flex pt-16 lg:pt-0 flex flex-col justify-center items-center">
 				<div class="container px-4 lg:px-0 mx-auto h-full py-10">
 					<h2 class="text-white text-4xl font-bold text-center">Qualifications</h2>
 					<div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-10 w-full">
@@ -168,8 +170,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="my-work" class="calc-height bg-white pt-10 lg:pt-0 flex flex-col justify-center items-center">
-				<div class="container py-4 lg:py-10 px-4 lg:px-0 mx-auto">
+			<div id="my-work" class="calc-height bg-white pt-16 lg:pt-0 flex flex-col justify-center items-center">
+				<div class="container py-10 lg:py-10 px-4 lg:px-0 mx-auto">
 					<h2 class="text-primary text-4xl font-bold text-center mb-6">My Work</h2>
 					<div class="grid grid-cols-3 gap-8 w-full mb-10">
 						<div class="col-span-3 md:col-span-1">
@@ -205,8 +207,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="about-me" class="calc-height bg-primary pt-10 lg:pt-0 flex flex-col justify-center items-center">
-				<div class="container py-4 lg:py-10 px-4 lg:px-0 mx-auto">
+			<div id="about-me" class="calc-height bg-primary py-16 lg:py-0 flex flex-col justify-center items-center">
+				<div class="container py-10 lg:py-10 px-4 lg:px-0 mx-auto">
 					<div class="grid grid-cols-3 gap-8 w-full">
 						<div class="col-span-3 md:col-span-2 md:order-2 flex flex-col justify-center">
 							<h2 class="text-white text-4xl font-bold mb-4">About Me</h2>
@@ -226,13 +228,13 @@
 							</div>
 						</div>
 						<div class="col-span-3 md:col-span-1 md:order-1">
-							<img src="/assets/adam-thomas-headshot-square.jpg" alt="Adam Thomas" class="w-full h-full object-cover rounded-full" />
+							<img src="/assets/adam-thomas-headshot-square.jpg" alt="Adam Thomas" class="w-full object-cover rounded-full" />
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<script src="./script.js"></script>
+		<script src="/src/script.js"></script>
 	</body>
 </html>
