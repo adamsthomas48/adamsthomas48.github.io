@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="night" class="scroll-smooth">
+<html data-theme="night" class="scroll-smooth" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,7 @@
 						<li><a onclick="scrollToSection('about-me')">About Me</a></li>
 					</ul>
 				</div>
-				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-blue.png" alt="Adam Thomas Logo" width="30px" /></a>
-				
+				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-blue.png" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1">
@@ -40,10 +39,10 @@
 				</ul>
 			</div>
 			<div class="navbar-end pr-4">
-				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-solid fa-envelope"></i></a>
-				<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-linkedin"></i></a>
-				<a href="https://github.com/adamsthomas48" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-github"></i></a>
-				<a href="https://www.instagram.com/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-instagram"></i></a>
+				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span></a>
+				<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
+				<a href="https://github.com/adamsthomas48" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+				<a href="https://www.instagram.com/adamsthomas48/" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"><i class="fa-brands fa-instagram"></i><span class="sr-only">Instagram</span></a>
 			</div>
 		</div>
 		<div class="overflow-y-scroll scroll-smooth h-screen calc-height" id="scroll-container">
@@ -73,15 +72,17 @@
 				</div>
 				<div id="nav-buttons" class="grid md:grid-cols-3 sm:grid-cols-1 gap-4 -mt-4 z-40 lg:w-1/2 w-full px-8 lg:px-0 mx-auto relative">
 					<div>
-						<button onclick="scrollToSection('qualifications')" class=" btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="qualifications">
+						<button onclick="scrollToSection('qualifications')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="qualifications">
 							<i class="fa-solid fa-award"></i> Qualifications
 						</button>
 					</div>
 					<div>
-						<button onclick="scrollToSection('my-work')" class=" btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="my-work"><i class="fa-solid fa-code"></i> My Work</button>
+						<button onclick="scrollToSection('my-work')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="my-work"><i class="fa-solid fa-code"></i> My Work</button>
 					</div>
 					<div>
-						<button onclick="scrollToSection('about-me')" class=" btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="about-me"><i class="fa-solid fa-user"></i> About Me</button>
+						<button onclick="scrollToSection('about-me')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="about-me">
+							<i class="fa-solid fa-user"></i> About Me
+						</button>
 					</div>
 				</div>
 			</header>
@@ -207,7 +208,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="about-me" class="calc-height bg-primary  py-16 lg:py-0 flex flex-col justify-center items-center">
+			<div id="about-me" class="calc-height bg-primary py-16 lg:py-0 flex flex-col justify-center items-center">
 				<div class="container py-10 lg:py-10 px-4 lg:px-0 mx-auto">
 					<div class="grid grid-cols-3 gap-8 w-full pb-10 lg:pb-0 md:pb-0">
 						<div class="col-span-3 md:col-span-2 md:order-2 flex flex-col justify-center">
@@ -221,14 +222,14 @@
 								the same energy and attention to detail.
 							</p>
 							<div class="flex flex-row gap-4 mt-4">
-								<a href="mailto:adamthomas.atx@gmail.com" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-solid fa-envelope"></i></a>
-								<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-linkedin"></i></a>
-								<a href="https://github.com/adamsthomas48" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-github"></i></a>
-								<a href="https://www.instagram.com/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-instagram"></i></a>
+								<a href="mailto:adamthomas.atx@gmail.com" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span></a>
+								<a href="https://www.linkedin.com/in/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
+								<a href="https://github.com/adamsthomas48" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+								<a href="https://www.instagram.com/adamsthomas48/" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-instagram"></i><span class="sr-only">Instagram</span></a>
 							</div>
 						</div>
-						<div class="col-span-3 md:col-span-1 md:order-1 ">
-							<img src="/assets/adam-thomas-headshot-square.jpg" alt="Adam Thomas" class="w-full object-cover rounded-full " />
+						<div class="col-span-3 md:col-span-1 md:order-1">
+							<img src="/assets/adam-thomas-headshot-square.jpg" alt="Adam Thomas" class="w-full object-cover rounded-full" />
 						</div>
 					</div>
 				</div>
