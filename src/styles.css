@@ -77,13 +77,7 @@
 }
 
 .calc-height {
-    height: auto;
-}
-
-@media (min-width: 768px) {
-    .calc-height {
-        min-height: calc(100vh - var(--nav-height));
-    }
+    min-height: calc(100vh - var(--nav-height));
 }
 
 
