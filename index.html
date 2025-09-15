@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html data-theme="night" class="scroll-smooth" lang="en">
+<html data-theme="nord" class="scroll-smooth" lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link href="/src/output.css" rel="stylesheet" />
+		<link href="/dist/output.css" rel="stylesheet" />
 		<link href="/src/styles.css" rel="stylesheet" />
 		<title>Adam Thomas - Web Developer</title>
 		<meta http-equiv="Content-Language" content="en" />
@@ -11,7 +11,7 @@
 		<meta name="description" content="Adam Thomas is a web developer with a passion for creating user-friendly and efficient websites." />
 		<meta name="keywords" content="Adam Thomas, web developer, Utah State University, USU, web development, project management, user experience, user interface, UX/UI, HTML, CSS, JavaScript" />
 		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
-		<link rel="icon" href="/assets/at-logo-blue-square.png" />
+		<link rel="icon" href="/assets/at-logo-orange-square.svg" />
 	</head>
 
 	<body class="overflow-hidden">
@@ -23,19 +23,19 @@
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
 						</svg>
 					</div>
-					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
 						<li><a onclick="scrollToSection('qualifications')">Qualifications</a></li>
 						<li><a onclick="scrollToSection('my-work')">My Work</a></li>
 						<li><a onclick="scrollToSection('about-me')">About Me</a></li>
 					</ul>
 				</div>
-				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-blue.png" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
+				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-base-square.svg" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
-				<ul class="menu menu-horizontal px-1">
-					<li><a onclick="scrollToSection('qualifications')" class="desktop-nav-link navbar-link" data-section="qualifications">Qualifications</a></li>
-					<li><a onclick="scrollToSection('my-work')" class="desktop-nav-link navbar-link" data-section="my-work">My Work</a></li>
-					<li><a onclick="scrollToSection('about-me')" class="desktop-nav-link navbar-link" data-section="about-me">About Me</a></li>
+				<ul class="menu menu-horizontal px-1 gap-4">
+					<li><a onclick="scrollToSection('qualifications')" class="desktop-nav-link navbar-link text-bold" data-section="qualifications">Qualifications</a></li>
+					<li><a onclick="scrollToSection('my-work')" class="desktop-nav-link navbar-link text-bold" data-section="my-work">My Work</a></li>
+					<li><a onclick="scrollToSection('about-me')" class="desktop-nav-link navbar-link text-bold" data-section="about-me">About Me</a></li>
 				</ul>
 			</div>
 			<div class="navbar-end pr-4">
@@ -91,9 +91,9 @@
 					<h2 class="text-white text-4xl font-bold text-center">Qualifications</h2>
 					<div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-10 w-full">
 						<div class="col-span-1">
-							<div class="card bg-base-100 pb-10 w-100 mb-6">
+							<div class="card bg-base-100 pb-10 w-full h-full mb-6">
 								<div class="card-body">
-									<h2 class="text-white text-4xl font-bold mt-4">Current Roles</h2>
+									<h2 class="text-neutral text-4xl font-bold mt-4">Current Roles</h2>
 									<h3 class="card-title text-2xl text-warning">Web UX/UI Designer</h3>
 									<div>
 										<p class="text-xl mb-2">Utah State University, IT Web Team</p>
@@ -152,19 +152,19 @@
 							<div class="bg-white rounded-lg">
 								<div class="flex flex-row">
 									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
-										<i class="fa-solid fa-award text-base-100 text-2xl"></i>
+										<i class="fa-solid fa-award text-white text-2xl"></i>
 									</div>
 
-									<h3 class="text-base-100 text-2xl font-bold p-4">UX/UI Certification - Nielsen Norman Group</h3>
+									<h3 class="text-neutral text-2xl font-bold p-4">UX/UI Certification - Nielsen Norman Group</h3>
 								</div>
 							</div>
 							<div class="bg-white rounded-lg mt-4">
 								<div class="flex flex-row">
 									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
-										<i class="fa-solid fa-award text-base-100 text-2xl"></i>
+										<i class="fa-solid fa-award text-white text-2xl"></i>
 									</div>
 
-									<h3 class="text-base-100 text-2xl font-bold p-4">Web Accessibility Certification - WebAIM</h3>
+									<h3 class="text-neutral text-2xl font-bold p-4">Web Accessibility Certification - WebAIM</h3>
 								</div>
 							</div>
 						</div>
@@ -174,38 +174,33 @@
 			<div id="my-work" class="calc-height bg-white pt-16 lg:pt-0 flex flex-col justify-center items-center">
 				<div class="container py-10 lg:py-10 px-4 lg:px-8 mx-auto">
 					<h2 class="text-primary text-4xl font-bold text-center mb-6">My Work</h2>
-					<div class="grid grid-cols-3 gap-8 w-full mb-10">
-						<div class="col-span-3 md:col-span-1">
-							<div class="bg-[url('/assets/library.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
-								<a href="https://gradschool.usu.edu/" target="_blank">
-									<div class="bg-gradient-to-t from-warning/80 from-10% to-white/0 to-50% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
-										<p class="text-white">Utah State University</p>
-										<h3 class="text-white text-4xl font-bold">School of Graduate Studies</h3>
-									</div>
-								</a>
-							</div>
+					<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+						<div class="flex flex-col justify-center col-span-2">
+							<h3 class="text-warning text-3xl font-bold mb-4">P10 Racing</h3>
+							<p class="text-neutral text-lg">
+								Designed and developed a React Native app for Formula 1 fans with fantasy-style predictions and live scoring.
+Focused on intuitive UX and engagement, leading to a successful launch on the iOS App Store.
+							</p>
 						</div>
-						<div class="col-span-3 md:col-span-1">
-							<div class="bg-[url('/assets/first-day.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
-								<a href="https://www.usu.edu/orientation/" target="_blank">
-									<div class="bg-gradient-to-t from-primary/80 from-15% to-white/0 to-60% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
-										<p class="text-white">Utah State University</p>
-										<h3 class="text-white text-4xl font-bold">Orientation</h3>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-span-3 md:col-span-1">
-							<div class="bg-[url('/assets/wellness-hiking.jpg')] bg-cover bg-center h-full lg:min-h-[500px] min-h-[400px] w-full rounded-lg shadow-xl shadow-black/40 hover:scale-105 transition-all duration-300">
-								<a href="https://www.usu.edu/hr/wellness/" target="_blank">
-									<div class="bg-gradient-to-t from-base-100/95 from-10% to-white/0 to-50% h-full rounded-lg py-4 px-4 w-full flex flex-col justify-end z-10">
-										<p class="text-white">Utah State University</p>
-										<h3 class="text-white text-4xl font-bold">Wellness</h3>
-									</div>
-								</a>
-							</div>
+						<div class="flex justify-center items-center col-span-3 lg:col-span-3">
+							<img src="/assets/p10-mockups.png" alt="Project screenshot" class="w-full"/>
 						</div>
 					</div>
+					<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-10">
+						<div class="flex justify-center items-center col-span-1 lg:col-span-3">
+							<video src="/assets/grad-school-scroll.mov" autoplay loop muted playsinline class="w-full rounded-lg"></video>
+						</div>
+						<div class="flex flex-col justify-center col-span-2">
+							<h3 class="text-warning text-3xl font-bold mb-4"> USU - School of Graduate Studies</h3>
+							<p class="text-neutral text-lg">
+								Led the redesign of the School of Graduate Studies website, conducting user research to identify the primary
+audience and top-used content areas. Delivered a modern, user-centered design that improved navigation and
+strengthened the school’s ability to market to prospective students.
+							</p>
+						</div>
+						
+					</div>
+					
 				</div>
 			</div>
 			<div id="about-me" class="calc-height bg-primary py-16 lg:py-0 flex flex-col justify-center items-center">
