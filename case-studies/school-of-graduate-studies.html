@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html data-theme="nord" class="scroll-smooth" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link href="/src/styles.css" rel="stylesheet" />
+		<style>
+			/* Custom carousel styles for seamless infinite loop */
+			.carousel-container {
+				overflow: hidden;
+				width: 100%;
+			}
+			
+			.carousel-track {
+				display: flex;
+				width: 200%; /* Double width for seamless loop */
+			}
+			
+			.carousel-auto {
+				animation: scroll-right 30s linear infinite;
+			}
+			
+			.carousel-auto-reverse {
+				animation: scroll-left 30s linear infinite;
+			}
+			
+			@keyframes scroll-right {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-50%);
+				}
+			}
+			
+			@keyframes scroll-left {
+				0% {
+					transform: translateX(-50%);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+			
+			.carousel-item-custom {
+				flex: 0 0 33.333%; /* Each item takes 1/3 of the container */
+				height: 266px;
+			}
+			
+			.carousel-item-custom img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain; /* Maintain aspect ratio, no cropping */
+				object-position: center;
+			}
+		</style>
+		<title>School of Graduate Studies - Case Study | Adam Thomas</title>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta name="language" content="English" />
+		<meta name="description" content="Case study: Redesigning the Utah State University School of Graduate Studies website for improved user experience and navigation." />
+		<meta name="keywords" content="Adam Thomas, case study, UX/UI design, web design, Utah State University, graduate studies, user research, website redesign" />
+		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
+		<link rel="icon" href="/assets/at-logo-orange-square.svg" />
+	</head>
+
+	<body class="bg-base-100">
+		<!-- Navigation -->
+		<div class="navbar bg-base-100 fixed top-0 z-50 w-full shadow-sm">
+			<div class="navbar-start">
+				<div class="dropdown">
+					<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+						</svg>
+					</div>
+					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+						<li><a href="#overview">The Challenge</a></li>
+						<li><a href="#research">Discovery</a></li>
+						<li><a href="#design">Strategy</a></li>
+						<li><a href="#results">Results</a></li>
+					</ul>
+				</div>
+				<a href="/index.html" class="btn btn-ghost hover:text-warning text-sm font-bold">
+					<i class="fa-solid fa-chevron-left text-xs mr-2"></i>
+					Back to Portfolio
+				</a>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1 gap-4">
+					<li><a href="#overview" class="navbar-link text-bold">The Challenge</a></li>
+					<li><a href="#research" class="navbar-link text-bold">Discovery</a></li>
+					<li><a href="#design" class="navbar-link text-bold">Strategy</a></li>
+					<li><a href="#results" class="navbar-link text-bold">Results</a></li>
+				</ul>
+			</div>
+			<div class="navbar-end pr-4">
+				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
+					<i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span>
+				</a>
+				<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
+					<i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span>
+				</a>
+				<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
+					<i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span>
+				</a>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="pt-16">
+			<!-- Hero Section -->
+			<section class="bg-white py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="text-center mb-5">
+							<p class="font-bold text-[#2c3e50] text-xl mb-3">Utah State University</p>
+							<p class="font-bold text-[#ff8908] text-4xl mb-3">School of Graduate Studies</p>
+							<p class="font-normal text-[#2c3e50] text-base">June 2024 - August 2024</p>
+						</div>
+						
+						<!-- Laptop Image -->
+						<div class="aspect-[1770/1019] mb-5">
+							<img src="https://www.figma.com/api/mcp/asset/85f54208-a457-4e19-9c0b-c4349e6e51b9" alt="Grad School Laptop" class="w-full h-full object-cover rounded-lg" />
+						</div>
+						
+						<!-- Divider with text -->
+						<div class="flex items-center gap-2.5 mb-5">
+							<div class="bg-[#ff8908] flex-1 h-px"></div>
+							<div class="flex-1 text-center text-[#2c3e50]">
+								<p class="font-bold text-3xl mb-2">More Than a Website Refresh</p>
+								<p class="font-normal text-base">A research-led redesign that redefined the audience and brought the Grad School story to life.</p>
+							</div>
+							<div class="bg-[#ff8908] flex-1 h-px"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Challenge Section -->
+			<section id="overview" class="bg-[#f4f4f4] py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="flex flex-col lg:flex-row gap-2.5 items-center">
+							<div class="flex-1 w-full lg:w-auto">
+								<p class="font-bold text-[#ff8908] text-4xl mb-2">The Challenge</p>
+								<p class="font-bold text-[#2c3e50] text-base mb-4">Create a site that informs current students and attracts new ones.</p>
+								<p class="font-normal text-base text-black mb-4">The School of Graduate Studies at Utah State University came to our team with a clear ask: Make the site more useful and more inspiring for both current and prospective graduate students.</p>
+								<p class="font-normal text-base text-black">The old site felt bland and confusing. It wasn't doing justice to the graduate experience at USU, and the marketing team wanted to transform it into something they could proudly share at events.</p>
+							</div>
+							<div class="flex-1 w-full lg:w-auto">
+								<div class="aspect-[1200/800] rounded-2xl overflow-hidden">
+									<img src="https://www.figma.com/api/mcp/asset/99bda5b4-7dc1-4735-a276-9315c6cc4971" alt="Student Life" class="w-full h-full object-cover" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Discovery Section -->
+			<section id="research" class="bg-white py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="text-center mb-5">
+							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Discovery</p>
+							<p class="font-normal text-base text-black mb-8">
+								Before we touched a line of code, I spoke with nearly <span class="font-bold">50 current grad students</span> to understand how they used (or didn't use) the site.
+							</p>
+							
+							<!-- Divider with surprise finding -->
+							<div class="flex items-center gap-7 py-8">
+								<div class="bg-[#ff8908] flex-1 h-px"></div>
+								<div class="text-center text-[#2c3e50]">
+									<p class="font-bold text-3xl mb-2">The Surprise Finding?</p>
+									<p class="font-normal text-base">Almost no current students used the grad school site after they enrolled.</p>
+								</div>
+								<div class="bg-[#ff8908] flex-1 h-px"></div>
+							</div>
+							
+							<p class="font-normal text-base text-black mb-4">This is because any information they needed about their degree was found on their individual college or program websites, rather than the School of Graduate Studies site.</p>
+							<p class="font-normal text-base text-black mb-8">We also ran targeted usability tests with 10 students trying to find key information. We found:</p>
+						</div>
+						
+						<!-- Research findings grid -->
+						<div class="flex flex-col lg:flex-row gap-6 justify-center">
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-question-circle text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-lg mb-2">Confusing Terminology</p>
+								<p class="font-normal text-base text-[#2c3e50]">Acronyms like "GPC" were being used throughout the site, confusing many users.</p>
+							</div>
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-sitemap text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-lg mb-2">Ambiguous Navigation</p>
+								<p class="font-normal text-base text-[#2c3e50]">Navigation was structured around audience types (e.g. "Future Students", "Faculty"), which didn't reflect user goals.</p>
+							</div>
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-heart text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-lg mb-2">Uninspiring Design</p>
+								<p class="font-normal text-base text-[#2c3e50]">The site lacked any visual or emotional appeal to prospective students.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Strategic Shift Section -->
+			<section id="design" class="bg-[#f4f4f4] py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="flex flex-col lg:flex-row gap-2.5 items-center mb-8">
+							<div class="w-full lg:w-[427px]">
+								<p class="font-bold text-[#ff8908] text-4xl mb-2.5">The Shift: Focus on Prospective Students</p>
+								<p class="font-normal text-base text-black">Armed with this research, we pivoted the site strategy:</p>
+							</div>
+							<div class="flex-1 w-full lg:w-auto">
+								<div class="space-y-2">
+									<div class="bg-[#2c3e50] rounded-lg">
+										<div class="flex items-center gap-4 px-4 py-1">
+											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
+												<i class="fa-solid fa-users text-white text-xl"></i>
+											</div>
+											<p class="font-normal text-base text-white">Focused on prospective students as the primary audience</p>
+										</div>
+									</div>
+									<div class="bg-[#2c3e50] rounded-lg">
+										<div class="flex items-center gap-4 px-4 py-1">
+											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
+												<i class="fa-solid fa-trash text-white text-xl"></i>
+											</div>
+											<p class="font-normal text-base text-white">Cut or consolidated pages that were redundant or rarely visited</p>
+										</div>
+									</div>
+									<div class="bg-[#2c3e50] rounded-lg">
+										<div class="flex items-center gap-4 px-4 py-1">
+											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
+												<i class="fa-solid fa-route text-white text-xl"></i>
+											</div>
+											<p class="font-normal text-base text-white">Simplified navigation to be task-based, not audience-based</p>
+										</div>
+									</div>
+									<div class="bg-[#2c3e50] rounded-lg">
+										<div class="flex items-center gap-4 px-4 py-1">
+											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
+												<i class="fa-solid fa-edit text-white text-xl"></i>
+											</div>
+											<p class="font-normal text-base text-white">Rewrote content to be clearer and more action-oriented</p>
+										</div>
+									</div>
+									<div class="bg-[#2c3e50] rounded-lg">
+										<div class="flex items-center gap-4 px-4 py-1">
+											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
+												<i class="fa-solid fa-bullhorn text-white text-xl"></i>
+											</div>
+											<p class="font-normal text-base text-white">Added "Why USU" marketing content: stats, visuals, and emotional appeal</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- Navigation Comparison -->
+						<div class="flex flex-col lg:flex-row gap-6 justify-center">
+							<div class="flex-1 min-w-0 flex flex-col items-center">
+								<div class="text-center text-[#2c3e50] mb-6">
+									<p class="font-bold text-3xl mb-1">Navigation Before</p>
+									<p class="font-normal text-base">Organized around audience types, which didn't match how users approached their tasks and added unnecessary complexity.</p>
+								</div>
+								<div class="w-full rounded-2xl shadow-lg overflow-hidden">
+									<img src="https://www.figma.com/api/mcp/asset/71db6da0-5a5f-465c-bbad-9cab857c0021" alt="Navigation Before" class="w-full" />
+								</div>
+							</div>
+							<div class="flex-1 min-w-0 flex flex-col items-center">
+								<div class="text-center text-[#2c3e50] mb-6">
+									<p class="font-bold text-3xl mb-1">Navigation After</p>
+									<p class="font-normal text-base">Refocused and task-based, helping prospective students find what they need faster and with more clarity.</p>
+								</div>
+								<div class="w-full rounded-2xl shadow-lg overflow-hidden">
+									<img src="https://www.figma.com/api/mcp/asset/abbdbfcf-e47a-40fe-8f87-49c21320f7cf" alt="Navigation After" class="w-full" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Bringing the Page to Life Section -->
+			<section class="bg-white py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="text-center mb-5">
+							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Bringing the Homepage to Life</p>
+							<p class="font-normal text-base text-black">The old homepage was flat and forgettable, so we reimagined it with prospective students in mind. We introduced interactive image cards in place of plain buttons to create a more engaging experience, built highlight cards showcasing key stats about USU to establish credibility, and incorporated aerial campus photography to evoke a sense of place and pride. These visual and structural updates brought energy to the site and helped tell a clearer, more compelling story about what makes graduate study at USU unique.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Carousel Section -->
+			<section class="bg-white py-0 pb-16">
+				<div class="w-full">
+					<!-- Top Carousel (auto-rotating right) -->
+					<div class="carousel-container mb-6">
+						<div class="carousel-track carousel-auto">
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/690097cc-84a1-4c41-b8c8-d9ddfed0b201" alt="Homepage Screenshot 1" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/cedbe98b-e46f-4b85-b9e5-de022190260a" alt="Homepage Screenshot 2" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/ba7db1fe-10df-40ed-82e1-1307fd1283f6" alt="Homepage Screenshot 3" />
+							</div>
+							<!-- Duplicate for seamless loop -->
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/690097cc-84a1-4c41-b8c8-d9ddfed0b201" alt="Homepage Screenshot 1" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/cedbe98b-e46f-4b85-b9e5-de022190260a" alt="Homepage Screenshot 2" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/ba7db1fe-10df-40ed-82e1-1307fd1283f6" alt="Homepage Screenshot 3" />
+							</div>
+						</div>
+					</div>
+					
+					<!-- Bottom Carousel (auto-rotating left) -->
+					<div class="carousel-container">
+						<div class="carousel-track carousel-auto-reverse">
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/0518a6c9-16d6-4a52-b67b-16dd8ee58249" alt="Homepage Screenshot 4" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/1b613952-b828-45de-8fa5-a7264b1ecd93" alt="Homepage Screenshot 5" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/91e35a0b-6503-412e-8aa2-cc08be3fb9e7" alt="Homepage Screenshot 6" />
+							</div>
+							<!-- Duplicate for seamless loop -->
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/0518a6c9-16d6-4a52-b67b-16dd8ee58249" alt="Homepage Screenshot 4" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/1b613952-b828-45de-8fa5-a7264b1ecd93" alt="Homepage Screenshot 5" />
+							</div>
+							<div class="carousel-item-custom">
+								<img src="https://www.figma.com/api/mcp/asset/91e35a0b-6503-412e-8aa2-cc08be3fb9e7" alt="Homepage Screenshot 6" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Results Section -->
+			<section id="results" class="bg-[#f4f4f4] py-14">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="text-center mb-5">
+							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Results</p>
+							<p class="font-normal text-base text-black">While quantitative data was limited, stakeholder and user feedback indicated a strong positive reception.</p>
+						</div>
+						
+						<!-- Results grid -->
+						<div class="flex flex-col lg:flex-row gap-6 justify-center mb-8">
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-heart text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Students described the new site as "welcoming," "fun," and "full of Aggie pride"</p>
+							</div>
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-bullhorn text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Marketing began using the site much more actively at recruiting events</p>
+							</div>
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-users text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Internal stakeholders appreciated the clearer content and reduced clutter</p>
+							</div>
+						</div>
+						
+						<!-- The Big Win -->
+						<div class="flex items-center gap-7 py-8">
+							<div class="bg-[#ff8908] flex-1 h-px"></div>
+							<div class="text-center text-[#2c3e50]">
+								<p class="font-bold text-3xl mb-2">But the Biggest Win?</p>
+								<div class="font-normal text-base">
+									<p class="mb-0">We helped the Grad School shift focus to where it mattered most:</p>
+									<p>Connecting with future students, not duplicating content for current ones.</p>
+								</div>
+							</div>
+							<div class="bg-[#ff8908] flex-1 h-px"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<script src="/src/script.js"></script>
+		<script>
+			// Smooth scrolling with offset for fixed navbar
+			function scrollToSection(sectionId) {
+				const element = document.getElementById(sectionId);
+				if (element) {
+					const navbarHeight = 64; // Height of the fixed navbar
+					const elementPosition = element.offsetTop - navbarHeight;
+					window.scrollTo({
+						top: elementPosition,
+						behavior: 'smooth'
+					});
+				}
+			}
+
+			// Add click handlers to navigation links
+			document.addEventListener('DOMContentLoaded', function() {
+				// Handle desktop navigation links
+				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
+				navLinks.forEach(link => {
+					link.addEventListener('click', function(e) {
+						e.preventDefault();
+						const sectionId = this.getAttribute('href').substring(1);
+						scrollToSection(sectionId);
+					});
+				});
+
+				// Handle mobile navigation links
+				const mobileLinks = document.querySelectorAll('.menu a[href^="#"]');
+				mobileLinks.forEach(link => {
+					link.addEventListener('click', function(e) {
+						e.preventDefault();
+						const sectionId = this.getAttribute('href').substring(1);
+						scrollToSection(sectionId);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
