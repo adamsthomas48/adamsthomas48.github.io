@@ -6,55 +6,6 @@
 		<link href="/dist/output.css" rel="stylesheet" />
 		<link href="/src/styles.css" rel="stylesheet" />
 		<style>
-			/* Custom carousel styles for seamless infinite loop */
-			.carousel-container {
-				overflow: hidden;
-				width: 100%;
-			}
-			
-			.carousel-track {
-				display: flex;
-				width: 300%; /* Triple width for seamless infinite loop */
-			}
-			
-			.carousel-auto {
-				animation: scroll-right 30s linear infinite;
-			}
-			
-			.carousel-auto-reverse {
-				animation: scroll-left 30s linear infinite;
-			}
-			
-			@keyframes scroll-right {
-				0% {
-					transform: translateX(0%);
-				}
-				100% {
-					transform: translateX(-100%);
-				}
-			}
-			
-			@keyframes scroll-left {
-				0% {
-					transform: translateX(-100%);
-				}
-				100% {
-					transform: translateX(0%);
-				}
-			}
-			
-			.carousel-item-custom {
-				flex: 0 0 11.111%; /* 100% / 9 items = 11.111% each */
-				height: 266px;
-			}
-			
-			.carousel-item-custom img {
-				width: 100%;
-				height: 100%;
-				object-fit: contain; /* Maintain aspect ratio, no cropping */
-				object-position: center;
-			}
-
 			/* Scroll animation classes */
 			.animate-on-scroll {
 				opacity: 0;
@@ -128,6 +79,7 @@
 						<li><a href="#overview">The Challenge</a></li>
 						<li><a href="#research">Discovery</a></li>
 						<li><a href="#design">Strategy</a></li>
+						<li><a href="#design-showcase">Design</a></li>
 						<li><a href="#results">Results</a></li>
 					</ul>
 				</div>
@@ -141,6 +93,7 @@
 					<li><a href="#overview" class="navbar-link text-bold">The Challenge</a></li>
 					<li><a href="#research" class="navbar-link text-bold">Discovery</a></li>
 					<li><a href="#design" class="navbar-link text-bold">Strategy</a></li>
+					<li><a href="#design-showcase" class="navbar-link text-bold">Design</a></li>
 					<li><a href="#results" class="navbar-link text-bold">Results</a></li>
 				</ul>
 			</div>
@@ -351,7 +304,7 @@
 			</section>
 
 			<!-- Bringing the Page to Life Section -->
-			<section class="bg-white py-14">
+			<section id="design-showcase" class="bg-white py-14">
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
@@ -366,68 +319,36 @@
 			<section class="bg-white py-0 pb-16">
 				<div class="w-full">
 					<!-- Top Carousel (auto-rotating right) -->
-					<div class="carousel-container mb-6 animate-fade-in delay-200">
-						<div class="carousel-track carousel-auto">
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/navigation-cards.png" alt="Homepage Screenshot 1" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/quote.png" alt="Homepage Screenshot 2" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/get-involved.png" alt="Homepage Screenshot 3" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/navigation-cards.png" alt="Homepage Screenshot 1" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/quote.png" alt="Homepage Screenshot 2" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/get-involved.png" alt="Homepage Screenshot 3" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/navigation-cards.png" alt="Homepage Screenshot 1" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/quote.png" alt="Homepage Screenshot 2" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/get-involved.png" alt="Homepage Screenshot 3" />
-							</div>
+					<div class="group relative overflow-hidden whitespace-nowrap py-10 mb-6 animate-fade-in delay-200 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+						<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
+						</div>
+						<!-- Duplicate for infinite effect -->
+						<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
 						</div>
 					</div>
 					
 					<!-- Bottom Carousel (auto-rotating left) -->
-					<div class="carousel-container animate-fade-in delay-400">
-						<div class="carousel-track carousel-auto-reverse">
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/campus-scenery.jpg" class="rounded-lg" alt="Homepage Screenshot 4" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/stat-cards.png" alt="Homepage Screenshot 5" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/resource-cards.jpg" alt="Homepage Screenshot 6" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/campus-scenery.jpg" class="rounded-lg" alt="Homepage Screenshot 4" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/stat-cards.png" alt="Homepage Screenshot 5" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/resource-cards.jpg" alt="Homepage Screenshot 6" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/campus-scenery.jpg" class="rounded-lg" alt="Homepage Screenshot 4" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/stat-cards.png" alt="Homepage Screenshot 5" />
-							</div>
-							<div class="carousel-item-custom">
-								<img src="../assets/grad-school/resource-cards.jpg" alt="Homepage Screenshot 6" />
-							</div>
+					<div class="group relative overflow-hidden whitespace-nowrap py-10 animate-fade-in delay-400 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
+							
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
+							
+							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
+						</div>
+						<!-- Duplicate for infinite effect -->
+						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
+							
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
+							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
+							
+							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
 						</div>
 					</div>
 				</div>

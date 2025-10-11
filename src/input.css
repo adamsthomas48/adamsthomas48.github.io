@@ -43,6 +43,29 @@
   --noise: 0;
 }
 
+/* Infinite carousel animations */
+@keyframes carousel-slide-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@keyframes carousel-slide-right {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.animate-carousel-slide-left {
+    animation: carousel-slide-left 60s linear infinite;
+}
+
+.animate-carousel-slide-right {
+    animation: carousel-slide-right 60s linear infinite;
+}
+
+.animation-pause {
+    animation-play-state: paused;
+}
+
 
 
 

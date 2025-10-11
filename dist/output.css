@@ -894,6 +894,9 @@
       max-width: 96rem;
     }
   }
+  .mx-4 {
+    margin-inline: calc(var(--spacing) * 4);
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -998,18 +1001,6 @@
     align-items: center;
     flex-shrink: 0;
   }
-  .carousel {
-    display: inline-flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    @media (prefers-reduced-motion: no-preference) {
-      scroll-behavior: smooth;
-    }
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
   .card-title {
     display: flex;
     align-items: center;
@@ -1025,6 +1016,12 @@
   }
   .hidden {
     display: none;
+  }
+  .inline {
+    display: inline;
+  }
+  .inline-block {
+    display: inline-block;
   }
   .inline-flex {
     display: inline-flex;
@@ -1046,6 +1043,9 @@
   }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
   }
   .h-\[400px\] {
     height: 400px;
@@ -1077,8 +1077,14 @@
   .w-100 {
     width: calc(var(--spacing) * 100);
   }
+  .w-auto {
+    width: auto;
+  }
   .w-full {
     width: 100%;
+  }
+  .w-max {
+    width: max-content;
   }
   .max-w-5xl {
     max-width: var(--container-5xl);
@@ -1233,11 +1239,17 @@
   .bg-\[url\(\'\/assets\/mountains\.jpg\'\)\] {
     background-image: url('/assets/mountains.jpg');
   }
+  .\[mask-image\:_linear-gradient\(to_right\,_transparent_0\,_white_128px\,white_calc\(100\%-128px\)\,_transparent_100\%\)\] {
+    mask-image:  linear-gradient(to right, transparent 0, white 128px,white calc(100% - 128px), transparent 100%);
+  }
   .bg-cover {
     background-size: cover;
   }
   .bg-center {
     background-position: center;
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
@@ -1363,6 +1375,9 @@
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
   }
   .text-\[\#2c3e50\] {
     color: #2c3e50;
@@ -1700,6 +1715,31 @@
       opacity: 0%;
     }
   }
+}
+@keyframes carousel-slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes carousel-slide-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animate-carousel-slide-left {
+  animation: carousel-slide-left 60s linear infinite;
+}
+.animate-carousel-slide-right {
+  animation: carousel-slide-right 60s linear infinite;
+}
+.animation-pause {
+  animation-play-state: paused;
 }
 @layer base {
   :where(:root),:root:has(input.theme-controller[value=nord]:checked),[data-theme=nord] {
