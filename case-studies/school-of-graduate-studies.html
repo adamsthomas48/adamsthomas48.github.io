@@ -49,12 +49,53 @@
 				opacity: 1;
 			}
 
+			/* Auto-scrolling screenshot animation */
+			.screenshot-scroll-container {
+				max-height: 400px;
+				overflow: hidden;
+				border-radius: 1rem;
+				position: relative;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+			}
+
+			.screenshot-scroll-container img {
+				width: 100%;
+				height: auto;
+				display: block;
+				animation: auto-scroll 25s ease-in-out infinite;
+			}
+
+			@keyframes auto-scroll {
+				0%,
+				10% {
+					transform: translateY(0);
+				}
+				45%,
+				55% {
+					transform: translateY(calc(-100% + 500px));
+				}
+				90%,
+				100% {
+					transform: translateY(0);
+				}
+			}
+
 			/* Staggered animation delays */
-			.delay-100 { transition-delay: 0.1s; }
-			.delay-200 { transition-delay: 0.2s; }
-			.delay-300 { transition-delay: 0.3s; }
-			.delay-400 { transition-delay: 0.4s; }
-			.delay-500 { transition-delay: 0.5s; }
+			.delay-100 {
+				transition-delay: 0.1s;
+			}
+			.delay-200 {
+				transition-delay: 0.2s;
+			}
+			.delay-300 {
+				transition-delay: 0.3s;
+			}
+			.delay-400 {
+				transition-delay: 0.4s;
+			}
+			.delay-500 {
+				transition-delay: 0.5s;
+			}
 		</style>
 		<title>School of Graduate Studies - Case Study | Adam Thomas</title>
 		<meta http-equiv="Content-Language" content="en" />
@@ -98,15 +139,9 @@
 				</ul>
 			</div>
 			<div class="navbar-end pr-4">
-				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
-					<i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span>
-				</a>
-				<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
-					<i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span>
-				</a>
-				<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300">
-					<i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span>
-				</a>
+				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span> </a>
+				<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span> </a>
+				<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span> </a>
 			</div>
 		</div>
 
@@ -118,23 +153,87 @@
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
 							<p class="font-bold text-[#2c3e50] text-xl mb-3">Utah State University</p>
-							<p class="font-bold text-[#ff8908] text-4xl mb-3">School of Graduate Studies</p>
+							<p class="font-bold text-warning text-4xl mb-3">School of Graduate Studies</p>
 							<p class="font-normal text-[#2c3e50] text-base">June 2024 - August 2024</p>
 						</div>
-						
+
 						<!-- Laptop Image -->
 						<div class="aspect-[1770/1019] mb-5 animate-on-scroll delay-200">
 							<img src="https://www.figma.com/api/mcp/asset/85f54208-a457-4e19-9c0b-c4349e6e51b9" alt="Grad School Laptop" class="w-full h-full object-cover rounded-lg" />
 						</div>
-						
-						<!-- Divider with text -->
-						<div class="flex items-center gap-2.5 mb-5 animate-on-scroll delay-400">
-							<div class="bg-[#ff8908] flex-1 h-px"></div>
-							<div class="flex-2 text-center text-[#2c3e50]">
-								<p class="font-bold text-3xl mb-2">More Than a Website Refresh</p>
-								<p class="font-normal text-base">A research-led redesign that redefined the audience and brought the Grad School story to life.</p>
+
+						<!-- Transformation Overview -->
+						<div class="mt-12 mb-8 animate-fade-in">
+							<h3 class="text-center font-bold text-2xl text-[#2c3e50]">TLDR</h3>
+							<p class="text-center font-normal text-base text-[#2c3e50] mb-4">Clarifying the Audience. Elevating the Experience</p>
+
+							<div class="flex flex-col md:flex-row gap-8 items-stretch">
+							<!-- Column 1 -->
+							<div class="flex-1 text-center animate-on-scroll delay-100">
+								<div class="bg-[#2c3e50] rounded-lg p-6 flex flex-col h-full">
+									<div class="text-5xl font-bold text-warning mb-4">1</div>
+									<h4 class="font-bold text-lg text-white mb-3">Too broad to be effective</h4>
+									<p class="font-normal text-base text-white">The site originally tried to serve both current and prospective students, but lacked clarity, focus, and engagement.</p>
+								</div>
 							</div>
-							<div class="bg-[#ff8908] flex-1 h-px"></div>
+
+							<!-- Arrow 1 - Horizontal (Desktop) -->
+							<div class="hidden md:flex items-center justify-center mx-[-45px] z-10 bg-white rounded-full self-center">
+								<i class="fa-solid fa-circle-arrow-right text-warning text-5xl"></i>
+							</div>
+
+							<!-- Arrow 1 - Vertical (Mobile) -->
+							<div class="flex md:hidden items-center justify-center">
+								<i class="fa-solid fa-circle-arrow-down text-warning text-5xl"></i>
+							</div>
+
+							<!-- Column 2 -->
+							<div class="flex-1 text-center animate-on-scroll delay-200">
+								<div class="bg-[#2c3e50] rounded-lg p-6 flex flex-col h-full">
+									<div class="text-5xl font-bold text-warning mb-4">2</div>
+									<h4 class="font-bold text-lg text-white mb-3">Research revealed the true audience</h4>
+									<p class="font-normal text-base text-white">Interviews and usability tests showed current students didn't use the site, prospective students were the ones who needed it most.</p>
+								</div>
+							</div>
+
+							<!-- Arrow 2 - Horizontal (Desktop) -->
+							<div class="hidden md:flex items-center justify-center mx-[-45px] z-10 bg-white rounded-full self-center">
+								<i class="fa-solid fa-circle-arrow-right text-warning text-5xl"></i>
+							</div>
+
+							<!-- Arrow 2 - Vertical (Mobile) -->
+							<div class="flex md:hidden items-center justify-center ">
+								<i class="fa-solid fa-circle-arrow-down text-warning text-5xl"></i>
+							</div>
+
+							<!-- Column 3 -->
+							<div class="flex-1 text-center animate-on-scroll delay-300">
+								<div class="bg-[#2c3e50] rounded-lg p-6 flex flex-col h-full">
+									<div class="text-5xl font-bold text-warning mb-4">3</div>
+									<h4 class="font-bold text-lg text-white mb-3">Designed for real needs</h4>
+									<p class="font-normal text-base text-white">We shifted the entire strategy to focus on prospective students: streamlining navigation, improving clarity, and showcasing the value of USU.</p>
+								</div>
+							</div>
+
+							<!-- Arrow 3 - Horizontal (Desktop) -->
+							<div class="hidden md:flex items-center justify-center mx-[-45px] z-10 bg-white rounded-full self-center">
+								<i class="fa-solid fa-circle-arrow-right text-warning text-5xl"></i>
+							</div>
+
+							<!-- Arrow 3 - Vertical (Mobile) -->
+							<div class="flex md:hidden items-center justify-center ">
+								<i class="fa-solid fa-circle-arrow-down text-warning text-5xl"></i>
+							</div>
+
+							<!-- Column 4 -->
+							<div class="flex-1 text-center animate-on-scroll delay-400">
+								<div class="bg-[#2c3e50] rounded-lg p-6 flex flex-col h-full">
+									<div class="text-5xl font-bold text-warning mb-4">4</div>
+									<h4 class="font-bold text-lg text-white mb-3">Clearer, cleaner, and more impactful</h4>
+									<p class="font-normal text-base text-white">The result: more focused content, a 16% increase in engagement on key pages, and a site the marketing team now proudly uses at recruiting events.</p>
+								</div>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -146,15 +245,16 @@
 					<div class="max-w-5xl mx-auto">
 						<div class="flex flex-col lg:flex-row gap-2.5 items-center">
 							<div class="flex-1 w-full lg:w-auto animate-slide-left">
-								<p class="font-bold text-[#ff8908] text-4xl mb-2">The Challenge</p>
+								<p class="font-bold text-warning text-4xl mb-2">The Challenge</p>
 								<p class="font-bold text-[#2c3e50] text-base mb-4">Create a site that informs current students and attracts new ones.</p>
-								<p class="font-normal text-base text-black mb-4">The School of Graduate Studies at Utah State University came to our team with a clear ask: Make the site more useful and more inspiring for both current and prospective graduate students.</p>
-								<p class="font-normal text-base text-black">The old site felt bland and confusing. It wasn't doing justice to the graduate experience at USU, and the marketing team wanted to transform it into something they could proudly share at events.</p>
+								<p class="font-normal text-base text-black mb-4">The School of Graduate Studies at Utah State University came to our team with this ask: Make the site more useful and more inspiring for both current and prospective graduate students.</p>
+								<p class="font-normal text-base text-black">They felt that old site felt bland and confusing. It wasn't doing justice to the graduate experience at USU, and the marketing team wanted to transform it into something they could proudly share at events.</p>
 							</div>
 							<div class="flex-1 w-full lg:w-auto animate-slide-right delay-200">
-								<div class="aspect-[1200/800] rounded-2xl overflow-hidden">
-									<img src="https://www.figma.com/api/mcp/asset/99bda5b4-7dc1-4735-a276-9315c6cc4971" alt="Student Life" class="w-full h-full object-cover" />
+								<div class="screenshot-scroll-container">
+									<img src="/assets/grad-school/before.jpg" alt="Original Graduate Studies Website" />
 								</div>
+								<p class="text-center text-base mt-4 text-sm">Original Graduate Studies Website</p>
 							</div>
 						</div>
 					</div>
@@ -166,25 +266,23 @@
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Discovery</p>
-							<p class="font-normal text-base text-black mb-8">
-								Before we touched a line of code, I spoke with nearly <span class="font-bold">50 current grad students</span> to understand how they used (or didn't use) the site.
-							</p>
-							
+							<p class="font-extrabold text-warning text-4xl mb-3">Discovery</p>
+							<p class="font-normal text-base text-black mb-8">Before we touched a line of code, I spoke with nearly <span class="font-bold">50 current grad students</span> to understand how they used (or didn't use) the site.</p>
+
 							<!-- Divider with surprise finding -->
 							<div class="flex items-center gap-7 py-8 animate-fade-in delay-200">
-								<div class="bg-[#ff8908] flex-1 h-px"></div>
+								<div class="bg-warning flex-1 h-px"></div>
 								<div class="text-center text-[#2c3e50]">
 									<p class="font-bold text-3xl mb-2">The Surprise Finding?</p>
 									<p class="font-normal text-base">Almost no current students used the grad school site after they enrolled.</p>
 								</div>
-								<div class="bg-[#ff8908] flex-1 h-px"></div>
+								<div class="bg-warning flex-1 h-px"></div>
 							</div>
-							
+
 							<p class="font-normal text-base text-black mb-4">This is because any information they needed about their degree was found on their individual college or program websites, rather than the School of Graduate Studies site.</p>
 							<p class="font-normal text-base text-black mb-8">We also ran targeted usability tests with 10 students trying to find key information. We found:</p>
 						</div>
-						
+
 						<!-- Research findings grid -->
 						<div class="flex flex-col lg:flex-row gap-6 justify-center">
 							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-100">
@@ -217,19 +315,24 @@
 			<section id="design" class="bg-[#f4f4f4] py-14">
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
-						<div class="flex flex-col lg:flex-row gap-2.5 items-center mb-8">
-							<div class="w-full lg:w-[427px] animate-slide-left">
-								<p class="font-bold text-[#ff8908] text-4xl mb-2.5">The Shift: Focus on Prospective Students</p>
-								<p class="font-normal text-base text-black">Armed with this research, we pivoted the site strategy:</p>
+						<div class="flex flex-col lg:flex-row gap-2.5 mb-8">
+							<div class="w-full lg:w-1/2 animate-slide-left">
+								<p class="font-bold text-warning text-4xl mb-2.5">The Shift: Focus on Prospective Students</p>
+								<p class="font-normal text-base text-black">
+									After our discovery phase, we paused to ask a critical question: <strong>who is this site really for?</strong> The original goal was to serve both current and prospective graduate students, but our research told a different story. Current students overwhelmingly
+									relied on their individual program pages for information, the Grad School site just wasn't part of their workflow. Instead of duplicating content and adding unnecessary clutter, we saw an opportunity to focus the site on its most impactful audience:
+									<strong>prospective students</strong>. By doing so, we could bring clarity to the structure, tailor messaging around "Why USU," and turn the site into a more effective recruitment tool.
+								</p>
+								<p class="font-normal text-base text-black mt-4">That insight shaped a clear strategy moving forward. Here's how we approached the redesign:</p>
 							</div>
-							<div class="flex-1 w-full lg:w-auto animate-slide-right delay-200">
-								<div class="space-y-2">
+							<div class="w-full lg:w-1/2 animate-slide-right delay-200">
+								<div class="h-full flex flex-col justify-between space-y-6">
 									<div class="bg-[#2c3e50] rounded-lg animate-on-scroll delay-100">
 										<div class="flex items-center gap-4 px-4 py-1">
 											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
 												<i class="fa-solid fa-users text-white text-xl"></i>
 											</div>
-											<p class="font-normal text-base text-white">Focused on prospective students as the primary audience</p>
+											<p class="font-normal text-base text-white">Focus on prospective students as the primary audience</p>
 										</div>
 									</div>
 									<div class="bg-[#2c3e50] rounded-lg animate-on-scroll delay-200">
@@ -237,7 +340,7 @@
 											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
 												<i class="fa-solid fa-trash text-white text-xl"></i>
 											</div>
-											<p class="font-normal text-base text-white">Cut or consolidated pages that were redundant or rarely visited</p>
+											<p class="font-normal text-base text-white">Cut and consolidate pages that are redundant or rarely visited</p>
 										</div>
 									</div>
 									<div class="bg-[#2c3e50] rounded-lg animate-on-scroll delay-300">
@@ -245,7 +348,7 @@
 											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
 												<i class="fa-solid fa-route text-white text-xl"></i>
 											</div>
-											<p class="font-normal text-base text-white">Simplified navigation to be task-based, not audience-based</p>
+											<p class="font-normal text-base text-white">Simplify navigation to be task-based, not audience-based</p>
 										</div>
 									</div>
 									<div class="bg-[#2c3e50] rounded-lg animate-on-scroll delay-400">
@@ -253,7 +356,7 @@
 											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
 												<i class="fa-solid fa-edit text-white text-xl"></i>
 											</div>
-											<p class="font-normal text-base text-white">Rewrote content to be clearer and more action-oriented</p>
+											<p class="font-normal text-base text-white">Rewrite content to be clearer and more action-oriented</p>
 										</div>
 									</div>
 									<div class="bg-[#2c3e50] rounded-lg animate-on-scroll delay-500">
@@ -261,7 +364,7 @@
 											<div class="w-13 h-13 p-2.5 flex items-center justify-center">
 												<i class="fa-solid fa-bullhorn text-white text-xl"></i>
 											</div>
-											<p class="font-normal text-base text-white">Added "Why USU" marketing content: stats, visuals, and emotional appeal</p>
+											<p class="font-normal text-base text-white">Add "Why USU" marketing content: stats, visuals, and emotional appeal</p>
 										</div>
 									</div>
 								</div>
@@ -271,7 +374,7 @@
 						<div class="flex justify-center my-16">
 							<div class="w-1/3 h-px bg-gray-300"></div>
 						</div>
-						
+
 						<!-- Navigation Comparison -->
 						<div class="flex flex-col lg:flex-row gap-6 justify-center">
 							<div class="flex-1 min-w-0 flex flex-col items-center animate-slide-left delay-200">
@@ -288,7 +391,7 @@
 							</div>
 							<div class="flex-1 min-w-0 flex flex-col items-center animate-slide-right delay-400">
 								<div class="text-left text-[#2c3e50] mb-6 w-full">
-									<div class="bg-[#ff8908] inline-flex items-center justify-center px-2 py-0 mb-1">
+									<div class="bg-warning inline-flex items-center justify-center px-2 py-0 mb-1">
 										<p class="font-normal text-base text-white">After</p>
 									</div>
 									<p class="font-bold text-3xl mb-1">Navigation After</p>
@@ -308,13 +411,16 @@
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Bringing the Homepage to Life</p>
-							<p class="font-normal text-base text-black">The old homepage was flat and forgettable, so we reimagined it with prospective students in mind. We introduced interactive image cards in place of plain buttons to create a more engaging experience, built highlight cards showcasing key stats about USU to establish credibility, and incorporated aerial campus photography to evoke a sense of place and pride. These visual and structural updates brought energy to the site and helped tell a clearer, more compelling story about what makes graduate study at USU unique.</p>
+							<p class="font-extrabold text-warning text-4xl mb-3">Bringing the Homepage to Life</p>
+							<p class="font-normal text-base text-black">
+								The old homepage was flat and forgettable, so we reimagined it with prospective students in mind. We introduced interactive image cards in place of plain buttons to create a more engaging experience, built highlight cards showcasing key stats about USU to establish
+								credibility, and incorporated aerial campus photography to evoke a sense of place and pride. These visual and structural updates brought energy to the site and helped tell a clearer, more compelling story about what makes graduate study at USU unique.
+							</p>
 						</div>
 					</div>
 				</div>
 			</section>
-			
+
 			<!-- Carousel Section -->
 			<section class="bg-white py-0 pb-16">
 				<div class="w-full">
@@ -332,22 +438,20 @@
 							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
 						</div>
 					</div>
-					
+
 					<!-- Bottom Carousel (auto-rotating left) -->
 					<div class="group relative overflow-hidden whitespace-nowrap py-10 animate-fade-in delay-400 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
 						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-							
 							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
 							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-							
+
 							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
 						</div>
 						<!-- Duplicate for infinite effect -->
 						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-							
 							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
 							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-							
+
 							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
 						</div>
 					</div>
@@ -359,49 +463,47 @@
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<p class="font-extrabold text-[#ff8908] text-4xl mb-3">Results</p>
-							<p class="font-normal text-base text-black">While quantitative data was limited, stakeholder and user feedback indicated a strong positive reception.</p>
+							<p class="font-extrabold text-warning text-4xl mb-3">Results</p>
+							<p class="font-normal text-base text-black">After the launch of the redesigned site, stakeholder and user feedback indicated a strong positive reception.</p>
 						</div>
-						
+
 						<!-- Results grid -->
 						<div class="flex flex-col lg:flex-row gap-6 justify-center mb-8">
+							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-500">
+								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
+									<i class="fa-solid fa-arrow-trend-up text-[#2c3e50] text-3xl"></i>
+								</div>
+								<p class="text-[#2c3e50] text-base leading-relaxed">We saw increased engagement from prospective students, including a <strong>16% average increase in page views</strong> on content tailored to them</p>
+							</div>
 							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-100">
 								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
 									<i class="fa-solid fa-heart text-[#2c3e50] text-3xl"></i>
 								</div>
-								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Students described the new site as "welcoming," "fun," and "full of Aggie pride"</p>
+								<p class="text-[#2c3e50] text-base leading-relaxed">Students described the new site as "<strong>welcoming</strong>," "<strong>fun</strong>," and "<strong>full of Aggie pride</strong>"</p>
 							</div>
 							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-300">
 								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
 									<i class="fa-solid fa-bullhorn text-[#2c3e50] text-3xl"></i>
 								</div>
-								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Marketing began using the site much more actively at recruiting events</p>
-							</div>
-							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-500">
-								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
-									<i class="fa-solid fa-users text-[#2c3e50] text-3xl"></i>
-								</div>
-								<p class="font-bold text-[#2c3e50] text-base leading-relaxed">Internal stakeholders appreciated the clearer content and reduced clutter</p>
-							</div>
-						</div>
-						
-						<!-- The Big Win -->
-						<div class="flex items-center gap-7 py-8 animate-fade-in delay-200">
-							<div class="bg-[#ff8908] flex-1 h-px"></div>
-							<div class="text-center text-[#2c3e50]">
-								<p class="font-bold text-3xl mb-2">But the Biggest Win?</p>
-								<div class="font-normal text-base">
-									<p class="mb-0">We helped the Grad School shift focus to where it mattered most:</p>
-									<p>Connecting with future students, not duplicating content for current ones.</p>
-								</div>
-							</div>
-							<div class="bg-[#ff8908] flex-1 h-px"></div>
+							<p class="text-[#2c3e50] text-base leading-relaxed">Marketing began using the site much more actively at recruiting events</p>
 						</div>
 					</div>
-				</div>
-			</section>
 
-		</div>
+					<!-- The Big Win -->
+					<div class="flex items-center gap-7 py-8 mt-8 animate-fade-in delay-200">
+						<div class="bg-warning flex-1 h-px"></div>
+						<div class="text-center text-[#2c3e50] flex-6">
+							<p class="font-bold text-3xl mb-2">But the Biggest Win?</p>
+							<div class="font-normal text-base">
+								<p class="mb-0">We helped the School of Graduate Studies shift focus to where it mattered most: connecting with future students, not duplicating content for current ones. With a clearer purpose and more focused audience, the marketing team now has a streamlined, targeted website they can confidently build on, rather than wasting time maintaining underused pages and fragmented information.</p>
+							</div>
+						</div>
+						<div class="bg-warning flex-1 h-px"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 
 		<script src="/src/script.js"></script>
 		<script>
@@ -413,52 +515,55 @@
 					const elementPosition = element.offsetTop - navbarHeight;
 					window.scrollTo({
 						top: elementPosition,
-						behavior: 'smooth'
+						behavior: "smooth",
 					});
 				}
 			}
 
 			// Scroll animation observer
 			function initScrollAnimations() {
-				const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-fade-in');
-				
-				const observer = new IntersectionObserver((entries) => {
-					entries.forEach(entry => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add('animate-in');
-						}
-					});
-				}, {
-					threshold: 0.1,
-					rootMargin: '0px 0px -50px 0px'
-				});
+				const animatedElements = document.querySelectorAll(".animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-fade-in");
 
-				animatedElements.forEach(element => {
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("animate-in");
+							}
+						});
+					},
+					{
+						threshold: 0.1,
+						rootMargin: "0px 0px -50px 0px",
+					}
+				);
+
+				animatedElements.forEach((element) => {
 					observer.observe(element);
 				});
 			}
 
 			// Add click handlers to navigation links
-			document.addEventListener('DOMContentLoaded', function() {
+			document.addEventListener("DOMContentLoaded", function () {
 				// Initialize scroll animations
 				initScrollAnimations();
 
 				// Handle desktop navigation links
 				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
-				navLinks.forEach(link => {
-					link.addEventListener('click', function(e) {
+				navLinks.forEach((link) => {
+					link.addEventListener("click", function (e) {
 						e.preventDefault();
-						const sectionId = this.getAttribute('href').substring(1);
+						const sectionId = this.getAttribute("href").substring(1);
 						scrollToSection(sectionId);
 					});
 				});
 
 				// Handle mobile navigation links
 				const mobileLinks = document.querySelectorAll('.menu a[href^="#"]');
-				mobileLinks.forEach(link => {
-					link.addEventListener('click', function(e) {
+				mobileLinks.forEach((link) => {
+					link.addEventListener("click", function (e) {
 						e.preventDefault();
-						const sectionId = this.getAttribute('href').substring(1);
+						const sectionId = this.getAttribute("href").substring(1);
 						scrollToSection(sectionId);
 					});
 				});
