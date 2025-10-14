@@ -421,42 +421,54 @@
 				</div>
 			</section>
 
-			<!-- Carousel Section -->
-			<section class="bg-white py-0 pb-16">
-				<div class="w-full">
-					<!-- Top Carousel (auto-rotating right) -->
-					<div class="group relative overflow-hidden whitespace-nowrap py-10 mb-6 animate-fade-in delay-200 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-						<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
-						</div>
-						<!-- Duplicate for infinite effect -->
-						<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
-						</div>
+		<!-- Carousel Section - Desktop Only -->
+		<section class="hidden lg:block bg-white py-0 pb-16">
+			<div class="w-full">
+				<!-- Top Carousel (auto-rotating right) -->
+				<div class="group relative overflow-hidden whitespace-nowrap py-10 mb-6 animate-fade-in delay-200 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+					<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
 					</div>
-
-					<!-- Bottom Carousel (auto-rotating left) -->
-					<div class="group relative overflow-hidden whitespace-nowrap py-10 animate-fade-in delay-400 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-
-							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
-						</div>
-						<!-- Duplicate for infinite effect -->
-						<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
-							<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-
-							<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
-						</div>
+					<!-- Duplicate for infinite effect -->
+					<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
 					</div>
 				</div>
-			</section>
+
+				<!-- Bottom Carousel (auto-rotating left) -->
+				<div class="group relative overflow-hidden whitespace-nowrap py-10 animate-fade-in delay-400 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+					<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
+
+						<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
+					</div>
+					<!-- Duplicate for infinite effect -->
+					<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
+						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
+
+						<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mobile Screenshot Section -->
+		<section class="lg:hidden bg-white py-14">
+			<div class="container mx-auto px-4">
+				<div class="max-w-2xl mx-auto">
+					<div class="screenshot-scroll-container">
+						<img src="/assets/grad-school/after.jpg" alt="Redesigned Graduate Studies Website" />
+					</div>
+					<p class="text-center text-base mt-4 text-sm">Redesigned Graduate Studies Website</p>
+				</div>
+			</div>
+		</section>
 
 			<!-- Results Section -->
 			<section id="results" class="bg-[#f4f4f4] py-14">
