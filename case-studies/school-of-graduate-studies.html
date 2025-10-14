@@ -49,36 +49,40 @@
 				opacity: 1;
 			}
 
-			/* Auto-scrolling screenshot animation */
-			.screenshot-scroll-container {
-				max-height: 400px;
-				overflow: hidden;
-				border-radius: 1rem;
-				position: relative;
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-			}
+		/* Auto-scrolling screenshot animation */
+		.screenshot-scroll-container {
+			max-height: 400px;
+			overflow: hidden;
+			border-radius: 1rem;
+			position: relative;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		}
 
-			.screenshot-scroll-container img {
-				width: 100%;
-				height: auto;
-				display: block;
-				animation: auto-scroll 25s ease-in-out infinite;
-			}
+		.screenshot-scroll-container img {
+			width: 100%;
+			height: auto;
+			display: block;
+			transform: translateY(0);
+		}
 
-			@keyframes auto-scroll {
-				0%,
-				10% {
-					transform: translateY(0);
-				}
-				45%,
-				55% {
-					transform: translateY(calc(-100% + 500px));
-				}
-				90%,
-				100% {
-					transform: translateY(0);
-				}
+		.screenshot-scroll-container.screenshot-animate img {
+			animation: auto-scroll 25s ease-in-out infinite 1s;
+		}
+
+		@keyframes auto-scroll {
+			0%,
+			10% {
+				transform: translateY(0);
 			}
+			45%,
+			55% {
+				transform: translateY(calc(-100% + 500px));
+			}
+			90%,
+			100% {
+				transform: translateY(0);
+			}
+		}
 
 			/* Staggered animation delays */
 			.delay-100 {
@@ -535,33 +539,58 @@
 				}
 			}
 
-			// Scroll animation observer
-			function initScrollAnimations() {
-				const animatedElements = document.querySelectorAll(".animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-fade-in");
+		// Scroll animation observer
+		function initScrollAnimations() {
+			const animatedElements = document.querySelectorAll(".animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-fade-in");
 
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach((entry) => {
-							if (entry.isIntersecting) {
-								entry.target.classList.add("animate-in");
-							}
-						});
-					},
-					{
-						threshold: 0.1,
-						rootMargin: "0px 0px -50px 0px",
-					}
-				);
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("animate-in");
+						}
+					});
+				},
+				{
+					threshold: 0.1,
+					rootMargin: "0px 0px -50px 0px",
+				}
+			);
 
-				animatedElements.forEach((element) => {
-					observer.observe(element);
-				});
-			}
+			animatedElements.forEach((element) => {
+				observer.observe(element);
+			});
+		}
 
-			// Add click handlers to navigation links
-			document.addEventListener("DOMContentLoaded", function () {
-				// Initialize scroll animations
-				initScrollAnimations();
+		// Screenshot scroll animation observer
+		function initScreenshotAnimations() {
+			const screenshots = document.querySelectorAll(".screenshot-scroll-container");
+
+			const screenshotObserver = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("screenshot-animate");
+							screenshotObserver.unobserve(entry.target); // Only animate once
+						}
+					});
+				},
+				{
+					threshold: 0.3,
+					rootMargin: "0px",
+				}
+			);
+
+			screenshots.forEach((screenshot) => {
+				screenshotObserver.observe(screenshot);
+			});
+		}
+
+		// Add click handlers to navigation links
+		document.addEventListener("DOMContentLoaded", function () {
+			// Initialize scroll animations
+			initScrollAnimations();
+			initScreenshotAnimations();
 
 				// Handle desktop navigation links
 				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
