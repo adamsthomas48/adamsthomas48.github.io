@@ -84,30 +84,97 @@
 			}
 		}
 
-			/* Staggered animation delays */
-			.delay-100 {
-				transition-delay: 0.1s;
+		/* Staggered animation delays */
+		.delay-100 {
+			transition-delay: 0.1s;
+		}
+		.delay-200 {
+			transition-delay: 0.2s;
+		}
+		.delay-300 {
+			transition-delay: 0.3s;
+		}
+		.delay-400 {
+			transition-delay: 0.4s;
+		}
+		.delay-500 {
+			transition-delay: 0.5s;
+		}
+
+		/* Carousel animations */
+		.carousel-container {
+			position: relative;
+			overflow: hidden;
+			width: 100%;
+		}
+
+		.carousel-track {
+			display: flex;
+			width: max-content;
+			gap: 0;
+		}
+
+		.carousel-content {
+			display: flex;
+			flex-shrink: 0;
+		}
+
+		@keyframes scroll-left {
+			0% {
+				transform: translateX(0);
 			}
-			.delay-200 {
-				transition-delay: 0.2s;
+			100% {
+				transform: translateX(calc(-100% / 2));
 			}
-			.delay-300 {
-				transition-delay: 0.3s;
+		}
+
+		@keyframes scroll-right {
+			0% {
+				transform: translateX(calc(-100% / 2));
 			}
-			.delay-400 {
-				transition-delay: 0.4s;
+			100% {
+				transform: translateX(0);
 			}
-			.delay-500 {
-				transition-delay: 0.5s;
-			}
-		</style>
-		<title>School of Graduate Studies - Case Study | Adam Thomas</title>
-		<meta http-equiv="Content-Language" content="en" />
-		<meta name="language" content="English" />
-		<meta name="description" content="Case study: Redesigning the Utah State University School of Graduate Studies website for improved user experience and navigation." />
-		<meta name="keywords" content="Adam Thomas, case study, UX/UI design, web design, Utah State University, graduate studies, user research, website redesign" />
-		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
-		<link rel="icon" href="/assets/at-logo-orange-square.svg" />
+		}
+
+		.slide-left .carousel-track {
+			animation: scroll-left 40s linear infinite;
+		}
+
+		.slide-right .carousel-track {
+			animation: scroll-right 40s linear infinite;
+		}
+
+		.group:hover .carousel-track {
+			animation-play-state: paused;
+		}
+	</style>
+	<title>School of Graduate Studies - Case Study | Adam Thomas</title>
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="language" content="English" />
+	<meta name="description" content="Case study: Redesigning the Utah State University School of Graduate Studies website for improved user experience and navigation." />
+	<meta name="keywords" content="Adam Thomas, case study, UX/UI design, web design, Utah State University, graduate studies, user research, website redesign" />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://adamsthomas48.github.io/case-studies/school-of-graduate-studies.html" />
+	<meta property="og:title" content="School of Graduate Studies - Case Study | Adam Thomas" />
+	<meta property="og:description" content="Case study: Redesigning the Utah State University School of Graduate Studies website for improved user experience and navigation." />
+	<meta property="og:image" content="https://adamsthomas48.github.io/assets/grad-school/grad-school-laptop.png" />
+	<meta property="og:image:width" content="1770" />
+	<meta property="og:image:height" content="1019" />
+	<meta property="og:image:alt" content="Utah State University School of Graduate Studies Website Redesign" />
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://adamsthomas48.github.io/case-studies/school-of-graduate-studies.html" />
+	<meta name="twitter:title" content="School of Graduate Studies - Case Study | Adam Thomas" />
+	<meta name="twitter:description" content="Case study: Redesigning the Utah State University School of Graduate Studies website for improved user experience and navigation." />
+	<meta name="twitter:image" content="https://adamsthomas48.github.io/assets/grad-school/grad-school-laptop.png" />
+	<meta name="twitter:image:alt" content="Utah State University School of Graduate Studies Website Redesign" />
+	
+	<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
+	<link rel="icon" href="/assets/at-logo-orange-square.svg" />
 	</head>
 
 	<body class="bg-base-100 overflow-x-hidden">
@@ -163,7 +230,7 @@
 
 						<!-- Laptop Image -->
 						<div class="aspect-[1770/1019] mb-5 animate-on-scroll delay-200">
-							<img src="https://www.figma.com/api/mcp/asset/85f54208-a457-4e19-9c0b-c4349e6e51b9" alt="Grad School Laptop" class="w-full h-full object-cover rounded-lg" />
+							<img src="/assets/grad-school/grad-school-laptop.png" alt="Grad School Laptop" class="w-full h-full object-cover rounded-lg" />
 						</div>
 
 					<!-- Transformation Overview -->
@@ -428,42 +495,44 @@
 				</div>
 			</section>
 
-		<!-- Carousel Section - Desktop Only -->
-		<section class="hidden lg:block bg-white py-0 pb-16">
-			<div class="w-full">
-				<!-- Top Carousel (auto-rotating right) -->
-				<div class="group relative overflow-hidden whitespace-nowrap py-10 mb-6 animate-fade-in delay-200 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-					<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
+	<!-- Carousel Section - Desktop Only -->
+	<section class="hidden lg:block bg-white py-0 pb-16">
+		<div class="w-full">
+			<!-- Top Carousel (auto-rotating left) -->
+			<div class="group slide-left py-10 mb-6 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+				<div class="carousel-track">
+					<div class="carousel-content">
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
 					</div>
 					<!-- Duplicate for infinite effect -->
-					<div class="animate-carousel-slide-left group-hover:animation-pause inline-block w-max">
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
-					</div>
-				</div>
-
-				<!-- Bottom Carousel (auto-rotating left) -->
-				<div class="group relative overflow-hidden whitespace-nowrap py-10 animate-fade-in delay-400 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-					<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-
-						<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
-					</div>
-					<!-- Duplicate for infinite effect -->
-					<div class="animate-carousel-slide-right group-hover:animation-pause inline-block w-max">
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
-						<img class="mx-4 inline h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-
-						<img class="mx-4 inline h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
+					<div class="carousel-content" aria-hidden="true">
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="" />
 					</div>
 				</div>
 			</div>
-		</section>
+
+			<!-- Bottom Carousel (auto-rotating right) -->
+			<div class="group slide-right py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+				<div class="carousel-track">
+					<div class="carousel-content">
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
+						<img class="mx-4 h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
+					</div>
+					<!-- Duplicate for infinite effect -->
+					<div class="carousel-content" aria-hidden="true">
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="" />
+						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="" />
+						<img class="mx-4 h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 		<!-- Mobile Screenshot Section -->
 		<section class="lg:hidden bg-white py-14">
@@ -586,11 +655,25 @@
 			});
 		}
 
-		// Add click handlers to navigation links
-		document.addEventListener("DOMContentLoaded", function () {
-			// Initialize scroll animations
-			initScrollAnimations();
-			initScreenshotAnimations();
+	// Initialize carousels after images load
+	function initCarousels() {
+		const carouselTracks = document.querySelectorAll('.carousel-track');
+		carouselTracks.forEach(track => {
+			// Force a reflow to ensure animations start properly
+			track.style.animation = 'none';
+			void track.offsetHeight; // Trigger reflow
+			track.style.animation = null;
+		});
+	}
+
+	// Add click handlers to navigation links
+	document.addEventListener("DOMContentLoaded", function () {
+		// Initialize scroll animations
+		initScrollAnimations();
+		initScreenshotAnimations();
+
+		// Initialize carousels after a brief delay to ensure images are loaded
+		setTimeout(initCarousels, 100);
 
 				// Handle desktop navigation links
 				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
