@@ -911,6 +911,9 @@
   .-mt-4 {
     margin-top: calc(var(--spacing) * -4);
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
@@ -1434,6 +1437,9 @@
   .text-primary {
     color: var(--color-primary);
   }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
   .text-warning {
     color: var(--color-warning);
   }
@@ -1922,7 +1928,7 @@
     --color-base-content: oklch(32.437% 0.022 264.182);
     --color-primary: oklch(59.435% 0.077 254.027);
     --color-primary-content: oklch(11.887% 0.015 254.027);
-    --color-secondary: oklch(69.651% 0.059 248.687);
+    --color-secondary: #2d3e51;
     --color-secondary-content: oklch(13.93% 0.011 248.687);
     --color-accent: oklch(77.464% 0.062 217.469);
     --color-accent-content: oklch(15.492% 0.012 217.469);
