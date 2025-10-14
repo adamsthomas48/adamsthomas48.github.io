@@ -1189,6 +1189,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .overflow-y-scroll {
     overflow-y: scroll;
   }
