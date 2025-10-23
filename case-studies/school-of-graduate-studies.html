@@ -101,52 +101,39 @@
 			transition-delay: 0.5s;
 		}
 
-		/* Carousel animations */
-		.carousel-container {
+		/* Modal styles */
+		#screenshot-modal {
+			backdrop-filter: blur(5px);
+		}
+
+		#screenshot-modal.hidden {
+			display: none;
+		}
+
+		/* Animated highlight effect */
+		.animate-highlight {
 			position: relative;
-			overflow: hidden;
-			width: 100%;
+			display: inline;
+			background-image: linear-gradient(to right, rgba(251, 146, 60, 0.4) 0%, rgba(251, 146, 60, 0.4) 100%);
+			background-repeat: no-repeat;
+			background-size: 0% 100%;
+			background-position: left center;
+			padding: 2px 4px;
+			margin: 0 -4px;
+			border-radius: 4px;
 		}
 
-		.carousel-track {
-			display: flex;
-			width: max-content;
-			gap: 0;
+		.animate-highlight.highlight-in {
+			animation: highlightMarker 1.5s ease-out forwards;
 		}
 
-		.carousel-content {
-			display: flex;
-			flex-shrink: 0;
-		}
-
-		@keyframes scroll-left {
+		@keyframes highlightMarker {
 			0% {
-				transform: translateX(0);
+				background-size: 0% 100%;
 			}
 			100% {
-				transform: translateX(calc(-100% / 2));
+				background-size: 100% 100%;
 			}
-		}
-
-		@keyframes scroll-right {
-			0% {
-				transform: translateX(calc(-100% / 2));
-			}
-			100% {
-				transform: translateX(0);
-			}
-		}
-
-		.slide-left .carousel-track {
-			animation: scroll-left 40s linear infinite;
-		}
-
-		.slide-right .carousel-track {
-			animation: scroll-right 40s linear infinite;
-		}
-
-		.group:hover .carousel-track {
-			animation-play-state: paused;
 		}
 	</style>
 	<title>School of Graduate Studies - Case Study | Adam Thomas</title>
@@ -234,11 +221,11 @@
 						</div>
 
 					<!-- Transformation Overview -->
-					<div class="mt-12 mb-8 animate-fade-in overflow-x-hidden">
+					<div class="mt-12 mb-8 animate-fade-in overflow-hidden">
 						<h2 class="text-center font-bold text-2xl text-[#2c3e50]">Project at a Glance</h2>
 						<p class="text-center font-normal text-base text-[#2c3e50] mb-4">Clarifying the Audience. Elevating the Experience</p>
 
-						<div class="flex flex-col md:flex-row gap-8 items-stretch overflow-x-hidden">
+						<div class="flex flex-col md:flex-row gap-8 items-stretch">
 							<!-- Column 1 -->
 							<div class="flex-1 text-center animate-on-scroll delay-100">
 								<div class="bg-[#2c3e50] rounded-lg p-6 flex flex-col h-full">
@@ -310,37 +297,70 @@
 				</div>
 			</section>
 
-		<!-- Challenge Section -->
-		<section id="overview" class="bg-[#f4f4f4] py-14 overflow-x-hidden">
-				<div class="container mx-auto px-4 lg:px-36">
-					<div class="max-w-5xl mx-auto">
-						<div class="flex flex-col lg:flex-row gap-2.5 items-center">
-							<div class="flex-1 w-full lg:w-auto animate-slide-left">
-								<h2 class="font-bold text-warning text-4xl mb-2">The Challenge</h2>
-								<p class="font-bold text-[#2c3e50] text-base mb-4">Create a site that informs current students and attracts new ones.</p>
-								<p class="font-normal text-base text-black mb-4">The School of Graduate Studies at Utah State University came to our team with a goal: Make the site more useful and more inspiring for both current and prospective graduate students.</p>
-								<p class="font-normal text-base text-black">They felt that old site was bland and confusing. It wasn't doing justice to the graduate experience at USU, and the marketing team wanted to transform it into something they could proudly share at events.</p>
+	<!-- Challenge Section -->
+	<section id="overview" class="bg-[#f4f4f4] py-14 overflow-x-hidden">
+			<div class="container mx-auto px-4 lg:px-36">
+				<div class="max-w-5xl mx-auto">
+					<div class="flex flex-col lg:flex-row gap-8 items-center mb-12">
+						<div class="flex-1 w-full lg:w-auto animate-slide-left">
+							<h2 class="font-bold text-warning text-3xl mb-2">The Challenge</h2>
+							<p class="font-bold text-[#2c3e50] text-base mb-4">Create a site that informs current students and attracts new ones.</p>
+							<p class="font-normal text-base text-black mb-4">The School of Graduate Studies at Utah State University came to our team with a goal: Make the site more useful and more inspiring for both current and prospective graduate students.</p>
+							<p class="font-normal text-base text-black">They felt that old site was bland and confusing. It wasn't doing justice to the graduate experience at USU, and the marketing team wanted to transform it into something they could proudly share at events.</p>
+						</div>
+						<div class="flex-1 w-full lg:w-auto animate-slide-right delay-200">
+							<img src="/assets/grad-school/campus-scenery.jpg" alt="Graduate students on campus" class="w-full rounded-lg shadow-lg" />
+						</div>
+					</div>
 
-								<h3 class="font-bold text-warning text-2xl mt-2">My Role</h3>
-								<p class="font-normal text-base text-black">I served as the lead designer on this project, working closely with the Grad School marketing team to understand their goals, identify pain points, and guide the project from discovery to launch. I conducted user research and usability testing, created designs in Figma, and handled the majority of the site implementation in Modern Campus (Omni CMS). In addition to design and development, I also managed our team of student developers, helping coordinate and assign tasks to ensure we could efficiently build out other pages and meet the project timeline.</p>
-							</div>
-							<div class="flex-1 w-full lg:w-auto animate-slide-right delay-200">
-								<div class="screenshot-scroll-container">
-									<img src="/assets/grad-school/before.jpg" alt="Original Graduate Studies Website" />
+					<!-- My Role Section -->
+					<div class="animate-on-scroll delay-300">
+						<h3 class="font-bold text-warning text-2xl text-center">My Role</h3>
+						<p class="font-normal text-base text-black mb-2 text-center">I served as the lead designer on this project. My contributions included:</p>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+							<!-- Card 1 -->
+							<div class="bg-[#2c3e50] rounded-lg p-6 flex items-start gap-4 animate-on-scroll delay-100">
+								<div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+									<i class="fa-solid fa-users text-white text-2xl"></i>
 								</div>
-								<p class="text-center text-base mt-4 text-sm">Original Graduate Studies Website</p>
+								<p class="font-normal text-base text-white">Working closely with the Grad School marketing team to understand their goals and identify pain points</p>
+							</div>
+							
+							<!-- Card 2 -->
+							<div class="bg-[#2c3e50] rounded-lg p-6 flex items-start gap-4 animate-on-scroll delay-200">
+								<div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+									<i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+								</div>
+								<p class="font-normal text-base text-white">Conducting user research and usability testing to validate design decisions</p>
+							</div>
+							
+							<!-- Card 3 -->
+							<div class="bg-[#2c3e50] rounded-lg p-6 flex items-start gap-4 animate-on-scroll delay-300">
+								<div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+									<i class="fa-solid fa-pen-ruler text-white text-2xl"></i>
+								</div>
+								<p class="font-normal text-base text-white">Creating designs in Figma and handling the majority of site implementation in Modern Campus</p>
+							</div>
+							
+							<!-- Card 4 -->
+							<div class="bg-[#2c3e50] rounded-lg p-6 flex items-start gap-4 animate-on-scroll delay-400">
+								<div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+									<i class="fa-solid fa-people-group text-white text-2xl"></i>
+								</div>
+								<p class="font-normal text-base text-white">Managing our team of student developers, coordinating tasks to meet the project timeline</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
 		<!-- Discovery Section -->
 		<section id="research" class="bg-white py-14 overflow-x-hidden">
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<h2 class="font-extrabold text-warning text-4xl mb-3">Discovery</h2>
+							<h2 class="font-extrabold text-warning text-3xl mb-3">Discovery</h2>
 							<p class="font-normal text-base text-black mb-8">Before we touched a line of code, I spoke with nearly <span class="font-bold">50 current grad students</span> to understand how they used (or didn't use) the site.</p>
 
 							<!-- Divider with surprise finding -->
@@ -348,7 +368,7 @@
 								<div class="bg-warning flex-1 h-px"></div>
 							<div class="text-center text-[#2c3e50]">
 								<h3 class="font-bold text-3xl mb-2">The Surprise Finding?</h3>
-								<p class="font-normal text-base">Almost no current students used the grad school site after they enrolled.</p>
+								<p class="font-normal text-base animate-highlight">Almost no current students used the grad school site after they enrolled.</p>
 								</div>
 								<div class="bg-warning flex-1 h-px"></div>
 							</div>
@@ -391,11 +411,11 @@
 					<div class="max-w-5xl mx-auto">
 						<div class="flex flex-col lg:flex-row gap-2.5 mb-8">
 							<div class="w-full lg:w-1/2 animate-slide-left">
-								<h2 class="font-bold text-warning text-4xl mb-2.5">The Shift: Focus on Prospective Students</h2>
+								<h2 class="font-bold text-warning text-3xl mb-2.5">The Shift: Focus on Prospective Students</h2>
 								<p class="font-normal text-base text-black">
-									After our discovery phase, we paused to ask a critical question: <strong>who is this site really for?</strong> The original goal was to serve both current and prospective graduate students, but our research told a different story. Current students overwhelmingly
-									relied on their individual program pages for information. The Grad School site just wasn't part of their workflow. Instead of duplicating content and adding unnecessary clutter, we saw an opportunity to focus the site on its most impactful audience:
-									<strong>prospective students</strong>. By doing so, we could bring clarity to the structure, tailor messaging around "Why USU," and turn the site into a more effective recruitment tool.
+									After our discovery phase, we paused to ask a critical question: <strong class="animate-highlight">who is this site really for?</strong> The original goal was to serve both current and prospective graduate students, but our research told a different story. Current students overwhelmingly
+									relied on their individual program pages for information. The Grad School site just wasn't part of their workflow. <span class="animate-highlight">Instead of duplicating content and adding unnecessary clutter, we saw an opportunity to focus the site on its most impactful audience:
+									<strong>prospective students</strong></span>. By doing so, we could bring clarity to the structure, tailor messaging around "Why USU," and turn the site into a more effective recruitment tool.
 								</p>
 								<p class="font-normal text-base text-black mt-4">That insight shaped a clear strategy moving forward. Here's how we approached the redesign <i class="fa-solid fa-arrow-right hidden lg:inline-block ml-2"></i></p>
 							</div>
@@ -485,7 +505,7 @@
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<h2 class="font-extrabold text-warning text-4xl mb-3">Bringing the Homepage to Life</h2>
+							<h2 class="font-extrabold text-warning text-3xl mb-3">Bringing the Homepage to Life</h2>
 							<p class="font-normal text-base text-black">
 								The old homepage was flat and forgettable, so we reimagined it with prospective students in mind. We introduced interactive image cards in place of plain buttons to create a more engaging experience, built highlight cards showcasing key stats about USU to establish
 								credibility, and incorporated aerial campus photography to evoke a sense of place and pride. These visual and structural updates brought energy to the site and helped tell a clear, more compelling story about what makes graduate study at USU unique.
@@ -495,63 +515,76 @@
 				</div>
 			</section>
 
-	<!-- Carousel Section - Desktop Only -->
-	<section class="hidden lg:block bg-white py-0 pb-16">
-		<div class="w-full">
-			<!-- Top Carousel (auto-rotating left) -->
-			<div class="group slide-left py-10 mb-6 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-				<div class="carousel-track">
-					<div class="carousel-content">
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="Navigation Cards" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="Quote Section" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="Get Involved Section" />
+	<!-- Before/After Comparison Section -->
+	<section class="bg-white py-0 pb-16">
+		<div class="container mx-auto px-4 lg:px-36">
+			<div class="max-w-5xl mx-auto">
+				<div class="flex flex-col lg:flex-row gap-6 justify-center">
+					<!-- Before Image -->
+					<div class="flex-1 min-w-0 flex flex-col items-center animate-slide-left delay-200">
+						<div class="text-left text-[#2c3e50] mb-6 w-full">
+							<div class="bg-[#2c3e50] inline-flex items-center justify-center px-2 py-0 mb-1">
+								<p class="font-normal text-base text-white">Before</p>
+							</div>
+							<p class="font-bold text-3xl mb-1">Original Homepage</p>
+							<p class="font-normal text-base">Bland design with unclear audience and confusing navigation</p>
+						</div>
+						<div class="relative w-full h-full rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="openModal('before')">
+							<img src="../assets/grad-school/gradschool-before.png" alt="Original Graduate Studies Homepage" class="w-full" />
+							<!-- Expand icon overlay -->
+							<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+								<div class="bg-white bg-opacity-90 rounded-full p-3 shadow-lg opacity-60 w-14 h-14 flex items-center justify-center">
+									<i class="fa-solid fa-up-right-and-down-left-from-center text-[#2c3e50] text-2xl"></i>
+								</div>
+							</div>
+						</div>
 					</div>
-					<!-- Duplicate for infinite effect -->
-					<div class="carousel-content" aria-hidden="true">
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/navigation-cards.png" alt="" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/quote.png" alt="" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/get-involved.png" alt="" />
-					</div>
-				</div>
-			</div>
 
-			<!-- Bottom Carousel (auto-rotating right) -->
-			<div class="group slide-right py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
-				<div class="carousel-track">
-					<div class="carousel-content">
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="Statistics Cards" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="Resource Cards" />
-						<img class="mx-4 h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="Campus Scenery" />
-					</div>
-					<!-- Duplicate for infinite effect -->
-					<div class="carousel-content" aria-hidden="true">
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/stat-cards.png" alt="" />
-						<img class="mx-4 h-64 w-auto object-contain" src="../assets/grad-school/resource-cards.jpg" alt="" />
-						<img class="mx-4 h-64 w-auto object-contain rounded-lg" src="../assets/grad-school/campus-scenery.jpg" alt="" />
+					<!-- After Image -->
+					<div class="flex-1 min-w-0 flex flex-col items-center animate-slide-right delay-400">
+						<div class="text-left text-[#2c3e50] mb-6 w-full">
+							<div class="bg-warning inline-flex items-center justify-center px-2 py-0 mb-1">
+								<p class="font-normal text-base text-white">After</p>
+							</div>
+							<p class="font-bold text-3xl mb-1">Redesigned Homepage</p>
+							<p class="font-normal text-base">Focused, engaging design tailored for prospective students</p>
+						</div>
+						<div class="relative w-full rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-transform hover:scale-105" onclick="openModal('after')">
+							<img src="../assets/grad-school/gradschool-after.png" alt="Redesigned Graduate Studies Homepage" class="w-full" />
+							<!-- Expand icon overlay -->
+							<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+								<div class="bg-white bg-opacity-90 rounded-full p-3 shadow-lg opacity-60 w-14 h-14 flex items-center justify-center">
+									<i class="fa-solid fa-up-right-and-down-left-from-center text-[#2c3e50] text-2xl"></i>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-		<!-- Mobile Screenshot Section -->
-		<section class="lg:hidden bg-white py-14">
-			<div class="container mx-auto px-4">
-				<div class="max-w-2xl mx-auto">
-					<div class="screenshot-scroll-container">
-						<img src="/assets/grad-school/after.jpg" alt="Redesigned Graduate Studies Website" />
-					</div>
-					<p class="text-center text-base mt-4 text-sm">Redesigned Graduate Studies Website</p>
-				</div>
+	<!-- Modal for Full Screenshots -->
+	<div id="screenshot-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4" onclick="closeModal()">
+		<div class="relative max-w-5xl w-full max-h-[90vh] bg-white rounded-lg overflow-hidden" onclick="event.stopPropagation()">
+			<!-- Close Button -->
+			<button onclick="closeModal()" class="absolute top-4 right-4 z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors">
+				<i class="fa-solid fa-times text-2xl text-gray-700"></i>
+			</button>
+			
+			<!-- Scrollable Image Container -->
+			<div class="overflow-y-auto max-h-[90vh]">
+				<img id="modal-image" src="" alt="Full Screenshot" class="w-full" />
 			</div>
-		</section>
+		</div>
+	</div>
 
 		<!-- Results Section -->
 		<section id="results" class="bg-[#f4f4f4] py-14 overflow-x-hidden">
 				<div class="container mx-auto px-4 lg:px-36">
 					<div class="max-w-5xl mx-auto">
 						<div class="text-center mb-5 animate-on-scroll">
-							<h2 class="font-extrabold text-warning text-4xl mb-3">Results</h2>
+							<h2 class="font-extrabold text-warning text-3xl mb-3">Results</h2>
 							<p class="font-normal text-base text-black">After the launch of the redesigned site, stakeholder and user feedback indicated a strong positive reception.</p>
 						</div>
 
@@ -561,7 +594,7 @@
 								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
 									<i class="fa-solid fa-arrow-trend-up text-[#2c3e50] text-3xl"></i>
 								</div>
-								<p class="text-[#2c3e50] text-base leading-relaxed">We saw increased engagement from prospective students, including a <strong>16% average increase in page views</strong> on content tailored to them</p>
+								<p class="text-[#2c3e50] text-base leading-relaxed">We saw increased engagement from prospective students, including a <strong class="animate-highlight">16% average increase in page views</strong> on content tailored to them</p>
 							</div>
 							<div class="flex-1 min-w-0 flex flex-col items-center text-center animate-on-scroll delay-100">
 								<div class="w-14 h-14 p-2.5 mb-2.5 flex items-center justify-center">
@@ -583,7 +616,7 @@
 						<div class="text-center text-[#2c3e50] flex-6">
 							<h3 class="font-bold text-3xl mb-2">But the Biggest Win?</h3>
 							<div class="font-normal text-base">
-								<p class="mb-0">We helped the School of Graduate Studies shift focus to where it mattered most: connecting with future students, not duplicating content for current ones. With a clearer purpose and more focused audience, the marketing team now has a streamlined, targeted website they can confidently build on, rather than wasting time maintaining underused pages and fragmented information.</p>
+								<p class="mb-0">We helped the School of Graduate Studies shift focus to where it mattered most: <span class="animate-highlight">connecting with future students, not duplicating content for current ones</span>. With a clearer purpose and more focused audience, the marketing team now has a streamlined, targeted website they can confidently build on, rather than wasting time maintaining underused pages and fragmented information.</p>
 							</div>
 						</div>
 						<div class="bg-warning flex-1 h-px"></div>
@@ -631,6 +664,30 @@
 			});
 		}
 
+		// Animated highlight observer
+		function initHighlightAnimations() {
+			const highlightElements = document.querySelectorAll(".animate-highlight");
+
+			const highlightObserver = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("highlight-in");
+							highlightObserver.unobserve(entry.target); // Only animate once
+						}
+					});
+				},
+				{
+					threshold: 0.8,
+					rootMargin: "0px",
+				}
+			);
+
+			highlightElements.forEach((element) => {
+				highlightObserver.observe(element);
+			});
+		}
+
 		// Screenshot scroll animation observer
 		function initScreenshotAnimations() {
 			const screenshots = document.querySelectorAll(".screenshot-scroll-container");
@@ -655,25 +712,44 @@
 			});
 		}
 
-	// Initialize carousels after images load
-	function initCarousels() {
-		const carouselTracks = document.querySelectorAll('.carousel-track');
-		carouselTracks.forEach(track => {
-			// Force a reflow to ensure animations start properly
-			track.style.animation = 'none';
-			void track.offsetHeight; // Trigger reflow
-			track.style.animation = null;
-		});
+	// Modal functions for before/after screenshots
+	function openModal(type) {
+		const modal = document.getElementById('screenshot-modal');
+		const modalImage = document.getElementById('modal-image');
+		
+		if (type === 'before') {
+			modalImage.src = '../assets/grad-school/before.jpg';
+			modalImage.alt = 'Original Graduate Studies Homepage - Full Screenshot';
+		} else if (type === 'after') {
+			modalImage.src = '../assets/grad-school/after.jpg';
+			modalImage.alt = 'Redesigned Graduate Studies Homepage - Full Screenshot';
+		}
+		
+		modal.classList.remove('hidden');
+		modal.classList.add('flex');
+		document.body.style.overflow = 'hidden';
 	}
+
+	function closeModal() {
+		const modal = document.getElementById('screenshot-modal');
+		modal.classList.add('hidden');
+		modal.classList.remove('flex');
+		document.body.style.overflow = 'auto';
+	}
+
+	// Close modal on escape key
+	document.addEventListener('keydown', function(e) {
+		if (e.key === 'Escape') {
+			closeModal();
+		}
+	});
 
 	// Add click handlers to navigation links
 	document.addEventListener("DOMContentLoaded", function () {
 		// Initialize scroll animations
 		initScrollAnimations();
 		initScreenshotAnimations();
-
-		// Initialize carousels after a brief delay to ensure images are loaded
-		setTimeout(initCarousels, 100);
+		initHighlightAnimations();
 
 				// Handle desktop navigation links
 				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
