@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
 	const navButtons = document.getElementById("nav-buttons");
 	const sections = ["home", "qualifications", "my-work", "about-me"];
 
+	// Setup Intersection Observer for Lottie animations on scroll
+	const lottieObserver = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				// Element is in view, play the animation
+				entry.target.play();
+			}
+		});
+	}, {
+		threshold: 0.3 // Trigger when 30% of the element is visible
+	});
+
+	// Observe all lottie players with the class "lottie-scroll-play"
+	const lottiePlayers = document.querySelectorAll('.lottie-scroll-play');
+	lottiePlayers.forEach(player => {
+		lottieObserver.observe(player);
+	});
+
 	function setActiveSection() {
 		const scrollPosition = container.scrollTop;
 		const navbarHeight = navbar.offsetHeight;

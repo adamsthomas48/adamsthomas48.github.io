@@ -24,18 +24,18 @@
 						</svg>
 					</div>
 					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-						<li><a onclick="scrollToSection('qualifications')">Qualifications</a></li>
-						<li><a onclick="scrollToSection('my-work')">My Work</a></li>
-						<li><a onclick="scrollToSection('about-me')">About Me</a></li>
+						<li><a onclick="scrollToSection('featured-work')">Featured Work</a></li>
+						<li><a onclick="scrollToSection('how-i-think')">Qualifications</a></li>
+						<li><a onclick="scrollToSection('contact-me')">Contact Me</a></li>
 					</ul>
 				</div>
-				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-base-square.svg" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
+				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-orange-square.svg" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1 gap-4">
-					<li><a onclick="scrollToSection('qualifications')" class="desktop-nav-link navbar-link text-bold" data-section="qualifications">Qualifications</a></li>
-					<li><a onclick="scrollToSection('my-work')" class="desktop-nav-link navbar-link text-bold" data-section="my-work">My Work</a></li>
-					<li><a onclick="scrollToSection('about-me')" class="desktop-nav-link navbar-link text-bold" data-section="about-me">About Me</a></li>
+					<li><a onclick="scrollToSection('featured-work')" class="desktop-nav-link navbar-link text-bold" data-section="featured-work">Featured Work</a></li>
+					<li><a onclick="scrollToSection('how-i-think')" class="desktop-nav-link navbar-link text-bold" data-section="how-i-think">Qualifications</a></li>
+					<li><a onclick="scrollToSection('contact-me')" class="desktop-nav-link navbar-link text-bold" data-section="contact-me">Contact Me</a></li>
 				</ul>
 			</div>
 			<div class="navbar-end pr-4">
@@ -46,61 +46,116 @@
 			</div>
 		</div>
 		<div class="overflow-y-scroll scroll-smooth h-screen calc-height" id="scroll-container">
-			<header id="home" class="h-screen bg-cover bg-center flex flex-col justify-center items-center relative overflow-hidden" style="background-image: url('/assets/mountains.jpg')">
-				<div class="cloud-container absolute inset-0 pointer-events-none">
-					<img src="/assets/cloud-1.png" class="cloud cloud-1 absolute" alt="" style="z-index: 4" />
-				</div>
-
-				<div class="absolute inset-0 pointer-events-none" style="z-index: 5">
-					<img src="/assets/mountains-foreground.png" class="w-full h-full object-cover object-bottom" alt="Mountain foreground" />
-				</div>
-
-				<div class="cloud-container absolute inset-0 pointer-events-none" style="z-index: 6">
-					<img src="/assets/cloud-2.png" class="cloud cloud-2 absolute" alt="" />
-					<!-- <img src="/assets/cloud-1.png" class="cloud cloud-3 absolute" alt=""> -->
-				</div>
-
-				<div class="grid grid-cols-6 w-full items-center px-4 lg:px-0" style="z-index: 10">
-					<div class="col-span-1 bg-white rounded-full h-1 ml-10 -mr-16 z-10 hidden lg:block"></div>
-					<div class="col-span-6 lg:col-span-4 z-0">
-						<div class="bg-white/10 backdrop-blur rounded-lg py-10 w-full text-center">
-							<h1 class="text-6xl font-bold text-white">Adam Thomas</h1>
-							<p class="text-xl text-white">Web Developer & UX/UI Designer</p>
+			<header id="home" class="h-screen bg-white flex flex-col justify-center items-center relative">
+				<div class="container mx-auto px-8 lg:px-16">
+					<div class="grid lg:grid-cols-3 grid-cols-1 gap-12 items-center mb-16">
+						<!-- Left side - Text content -->
+						<div class="col-span-2">
+							<h1 class="text-5xl lg:text-6xl font-bold text-neutral mb-6">Adam Thomas</h1>
+							<p class="text-2xl lg:text-3xl text-neutral mb-6">
+								I'm a <span class="text-warning font-semibold">UX Designer</span> & Adjunct Instructor at Utah State University
+							</p>
+							<p class="text-lg text-neutral leading-relaxed">
+								I help teams turn complex problems into clear, intuitive user experiences through research, structure, and thoughtful design.
+							</p>
+						</div>
+						
+						<!-- Right side - Logo -->
+						<div class="hidden lg:flex justify-center lg:justify-end col-span-1">
+							<img src="/assets/at-logo-orange-square.svg" alt="Adam Thomas Logo" class="w-64 h-64 lg:w-96 lg:h-96" />
 						</div>
 					</div>
-					<div class="col-span-1 bg-white rounded-full h-1 mr-10 -ml-16 z-10 hidden lg:block"></div>
-				</div>
-				<div id="nav-buttons" class="grid md:grid-cols-3 sm:grid-cols-1 gap-4 -mt-4 z-40 lg:w-1/2 w-full px-8 lg:px-0 mx-auto relative">
-					<div>
-						<button onclick="scrollToSection('qualifications')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="qualifications">
-							<i class="fa-solid fa-award"></i> Qualifications
+					
+					<!-- Navigation Buttons -->
+					<div id="nav-buttons" class="hidden lg:flex flex-col md:flex-row max-w-4xl mx-auto bg-base-100 rounded-full overflow-hidden shadow-md">
+						<button onclick="scrollToSection('featured-work')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="featured-work">
+							Featured Work
 						</button>
-					</div>
-					<div>
-						<button onclick="scrollToSection('my-work')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="my-work"><i class="fa-solid fa-code"></i> My Work</button>
-					</div>
-					<div>
-						<button onclick="scrollToSection('about-me')" class="btn btn-primary text-white text-xl w-full border-none hover:scale-105 hover:bg-warning active:bg-primary focus:bg-primary transition-all duration-300" data-section="about-me">
-							<i class="fa-solid fa-user"></i> About Me
+						<button onclick="scrollToSection('how-i-think')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="how-i-think">
+							How I Think
+						</button>
+						<button onclick="scrollToSection('contact-me')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="contact-me">
+							Contact Me
 						</button>
 					</div>
 				</div>
 			</header>
-			<div id="qualifications" class="calc-height bg-primary flex pt-16 lg:pt-0 flex flex-col justify-center items-center">
+			
+			<div id="featured-work" class="calc-height bg-white pt-16 lg:pt-0">
+				<div class="container py-10 lg:py-10 px-4 lg:px-8 mx-auto">
+					<h2 class="text-neutral text-4xl font-bold mb-10 text-center">Featured Work</h2>
+					
+					<!-- School of Graduate Studies Card -->
+					<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center bg-white rounded-3xl  overflow-hidden">
+						<!-- Left side - Lottie Animation with blue background -->
+						<div class="bg-base-100 flex items-center justify-center p-4 lg:p-4 min-h-[400px]">
+							<lottie-player 
+								id="grad-school-lottie"
+								class="w-full max-w-lg lottie-scroll-play" 
+								src="/assets/grad-school/grad-school-flow.json" 
+								background="transparent" 
+								speed="1"
+								loop>
+							</lottie-player>
+							
+						</div>
+						
+						<!-- Right side - Content -->
+						<div class="p-8 lg:p-12">
+							<p class="text-neutral text-lg font-semibold mb-2">Utah State University</p>
+							<h3 class="text-neutral text-3xl lg:text-3xl font-bold mb-6">School of Graduate Studies</h3>
+							<p class="text-neutral text-lg mb-8 leading-relaxed">
+								The School of Graduate Studies at Utah State University came to our team with a clear ask: Make the site more useful and more inspiring for both current and prospective graduate students.
+							</p>
+							<a href="/case-studies/school-of-graduate-studies.html" class="btn bg-warning hover:bg-[#d94f0a] text-white border-none text-lg px-8 rounded-full">
+								View Case Study <i class="fa-solid fa-arrow-right ml-2"></i>
+							</a>
+						</div>
+					</div>
+
+					<div class="grid mt-10 lg:grid-cols-2 grid-cols-1 gap-8 items-center bg-white rounded-3xl  overflow-hidden">
+						<!-- Left side - Lottie Animation with blue background -->
+						<div class="order-1 lg:order-2 bg-base-100 flex items-center justify-center p-4 lg:p-4 min-h-[400px]">
+							<lottie-player 
+								id="p10-lottie"
+								class="w-full max-w-lg lottie-scroll-play" 
+								src="/assets/p10-flow.json" 
+								background="transparent" 
+								speed="1"
+								loop>
+							</lottie-player>
+							
+						</div>
+						
+						<!-- Right side - Content -->
+						<div class="order-2 lg:order-1 p-8 lg:p-12">
+							
+							<h3 class="text-neutral text-3xl lg:text-3xl font-bold mb-6">P10 Racing</h3>
+							<p class="text-neutral text-lg mb-8 leading-relaxed">
+								Designed and developed a React Native app for Formula 1 fans with fantasy-style predictions and live scoring. Focused on intuitive UX and engagement, leading to a successful launch on the iOS App Store.
+							</p>
+							
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			<div id="how-i-think" class="calc-height bg-base-100 flex pt-16 lg:pt-0 flex flex-col justify-center items-center">
 				<div class="container px-4 lg:px-8 mx-auto h-full py-10">
-					<h2 class="text-white text-4xl font-bold text-center">Qualifications</h2>
+					<h2 class="text-neutral text-4xl font-bold text-center">Qualifications</h2>
 					<div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-10 w-full">
 						<div class="col-span-1">
-							<div class="card bg-base-100 pb-10 w-full h-full mb-6">
+							<div class="card bg-white pb-10 w-full h-full mb-6">
 								<div class="card-body">
-									<h2 class="text-neutral text-4xl font-bold mt-4">Current Roles</h2>
-									<h3 class="card-title text-2xl text-warning">Web UX/UI Designer</h3>
+									<h3 class="text-neutral text-3xl font-bold mt-4">Current Roles</h3>
+									<h4 class="card-title text-2xl text-warning">Web UX/UI Designer</h4>
 									<div>
 										<p class="text-xl mb-2">Utah State University, IT Web Team</p>
 										<p>Lead UX/UI strategy and redesigns across 50+ university sub-sites by gathering stakeholder input, defining user goals, and translating needs into accessible, brand-compliant digital solutions.</p>
 									</div>
 
-									<h3 class="card-title text-2xl text-warning mt-6">Adjunct Instructor | Intro to Web Dev & UX/UI</h3>
+									<h4 class="card-title text-2xl text-warning mt-6">Adjunct Instructor | Intro to Web Dev & UX/UI</h4>
 
 									<div>
 										<p class="text-xl mb-2">Utah State Unversity, Huntsman School of Business</p>
@@ -110,7 +165,7 @@
 							</div>
 						</div>
 						<div class="col-span-1">
-							<h3 class="text-white text-4xl font-bold mb-6 mt-4">Languages & Frameworks</h3>
+							<h3 class="text-neutral text-3xl font-bold mb-6 mt-4">Languages & Frameworks</h3>
 							<div class="flex flex-row gap-3 flex-wrap">
 								<div class="bg-white rounded-lg p-4">
 									<h4 class="text-warning text-2xl font-bold">HTML</h4>
@@ -147,7 +202,7 @@
 									<h4 class="text-warning text-2xl font-bold">Java</h4>
 								</div>
 							</div>
-							<h3 class="text-white text-4xl font-bold mt-10 mb-6">Certifications</h3>
+							<h3 class="text-neutral text-3xl font-bold mt-10 mb-6">Certifications</h3>
 
 							<div class="bg-white rounded-lg">
 								<div class="flex flex-row">
@@ -171,56 +226,24 @@
 					</div>
 				</div>
 			</div>
-			<div id="my-work" class="calc-height bg-white pt-16 lg:pt-0 flex flex-col justify-center items-center">
-				<div class="container py-10 lg:py-10 px-4 lg:px-8 mx-auto">
-					<h2 class="text-primary text-4xl font-bold text-center mb-6">My Work</h2>
-					<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-						<div class="flex flex-col justify-center col-span-2">
-							<h3 class="text-warning text-3xl font-bold mb-4">P10 Racing</h3>
-							<p class="text-neutral text-lg">
-								Designed and developed a React Native app for Formula 1 fans with fantasy-style predictions and live scoring.
-Focused on intuitive UX and engagement, leading to a successful launch on the iOS App Store.
-							</p>
-						</div>
-						<div class="flex justify-center items-center col-span-3 lg:col-span-3">
-							<img src="/assets/p10-mockups.png" alt="Project screenshot" class="w-full"/>
-						</div>
-					</div>
-					<div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mt-10">
-						<div class="flex justify-center items-center col-span-1 lg:col-span-3">
-							<img src="/assets/grad-school-screenshot.png" alt="Project screenshot" class="w-full rounded-lg"/>
-						</div>
-						<div class="flex flex-col justify-center col-span-2">
-							<h3 class="text-warning text-3xl font-bold mb-4"> USU - School of Graduate Studies</h3>
-							<p class="text-neutral text-lg">
-								Led the redesign of the School of Graduate Studies website, conducting user research to identify the primary
-audience and top-used content areas. Delivered a modern, user-centered design that improved navigation and
-strengthened the school’s ability to market to prospective students.
-							</p>
-						</div>
-						
-					</div>
-					
-				</div>
-			</div>
-			<div id="about-me" class="calc-height bg-primary py-16 lg:py-0 flex flex-col justify-center items-center">
+			<div id="contact-me" class="bg-white calc-height py-16 lg:py-0 flex flex-col justify-center items-center">
 				<div class="container py-10 lg:py-10 px-4 lg:px-8 mx-auto">
 					<div class="grid grid-cols-3 gap-8 w-full pb-10 lg:pb-0 md:pb-0">
 						<div class="col-span-3 md:col-span-2 md:order-2 flex flex-col justify-center">
-							<h2 class="text-white text-4xl font-bold mb-4">About Me</h2>
-							<p class="text-white text-xl mb-4">
+							<h2 class="text-neutral text-4xl font-bold mb-4">Contact Me</h2>
+							<p class="text-neutral text-xl mb-4">
 								I'm Adam Thomas, a programmer from Austin, Texas, with a passion for blending creativity and technology. My journey into web development began with photography, a hobby that taught me to appreciate composition, detail, and storytelling. That same passion for
 								creativity naturally transitioned into designing and building websites, where I could bring ideas to life in a whole new way.
 							</p>
-							<p class="text-white text-xl">
+							<p class="text-neutral text-xl">
 								Beyond web design, I'm an avid fan of hockey and Formula 1. There's something about the precision, strategy, and excitement of these sports that resonates with me and inspires my work. Whether it's capturing the perfect layout or coding something dynamic, I strive for
 								the same energy and attention to detail.
 							</p>
 							<div class="flex flex-row gap-4 mt-4">
-								<a href="mailto:adamthomas.atx@gmail.com" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span></a>
-								<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
-								<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
-								<a href="https://www.instagram.com/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base-100 text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-instagram"></i><span class="sr-only">Instagram</span></a>
+								<a href="mailto:adamthomas.atx@gmail.com" class="text-neutral text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span></a>
+								<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-neutral text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span></a>
+								<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-neutral text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span></a>
+								<a href="https://www.instagram.com/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-neutral text-4xl font-bold hover:scale-110 transition-all duration-300"><i class="fa-brands fa-instagram"></i><span class="sr-only">Instagram</span></a>
 							</div>
 						</div>
 						<div class="col-span-3 md:col-span-1 md:order-1">
@@ -230,7 +253,9 @@ strengthened the school’s ability to market to prospective students.
 				</div>
 			</div>
 		</div>
+		
 
 		<script src="/src/script.js"></script>
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	</body>
 </html>
