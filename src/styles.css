@@ -80,3 +80,33 @@
     min-height: calc(100vh - var(--nav-height));
 }
 
+.pattern-background {
+    /* background-image: url('/assets/austria.jpg'); */
+    background-color: #ff8a0520;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pattern-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/a-pattern.svg');
+    background-repeat: repeat;
+    background-position: 0 -8px;
+    background-size: 550px auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.65;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.pattern-background > * {
+    position: relative;
+    z-index: 1;
+}
+

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}, {
-		threshold: 0.3 // Trigger when 30% of the element is visible
+		threshold: 0.1 // Trigger when 10% of the element is visible
 	});
 
 	// Observe all lottie players with the class "lottie-scroll-play"

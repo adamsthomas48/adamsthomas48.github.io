@@ -5,11 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="/dist/output.css" rel="stylesheet" />
 		<link href="/src/styles.css" rel="stylesheet" />
-		<title>Adam Thomas - Web Developer</title>
+		<title>Adam Thomas - UX Designer</title>
 		<meta http-equiv="Content-Language" content="en" />
 		<meta name="language" content="English" />
-		<meta name="description" content="Adam Thomas is a web developer with a passion for creating user-friendly and efficient websites." />
-		<meta name="keywords" content="Adam Thomas, web developer, Utah State University, USU, web development, project management, user experience, user interface, UX/UI, HTML, CSS, JavaScript" />
+		<meta name="description" content="Adam Thomas is a UX designer with a passion for creating user-friendly and efficient user experiences." />
+		<meta name="keywords" content="Adam Thomas, UX designer, Utah State University, USU, user experience, user interface, UX/UI, HTML, CSS, JavaScript" />
 		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
 		<link rel="icon" href="/assets/at-logo-orange-square.svg" />
 	</head>
@@ -23,18 +23,18 @@
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
 						</svg>
 					</div>
-					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-						<li><a onclick="scrollToSection('featured-work')">Featured Work</a></li>
-						<li><a onclick="scrollToSection('how-i-think')">Qualifications</a></li>
-						<li><a onclick="scrollToSection('contact-me')">Contact Me</a></li>
-					</ul>
+				<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+					<li><a onclick="scrollToSection('featured-work')">Featured Work</a></li>
+					<li><a onclick="scrollToSection('how-i-think')">About Me</a></li>
+					<li><a onclick="scrollToSection('contact-me')">Contact Me</a></li>
+				</ul>
 				</div>
 				<a onclick="scrollToSection('home')" class="btn btn-ghost hover:text-warning text-xl"><img src="/assets/at-logo-orange-square.svg" alt="Adam Thomas Logo" width="30px" /><span class="sr-only">Home</span></a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1 gap-4">
 					<li><a onclick="scrollToSection('featured-work')" class="desktop-nav-link navbar-link text-bold" data-section="featured-work">Featured Work</a></li>
-					<li><a onclick="scrollToSection('how-i-think')" class="desktop-nav-link navbar-link text-bold" data-section="how-i-think">Qualifications</a></li>
+					<li><a onclick="scrollToSection('how-i-think')" class="desktop-nav-link navbar-link text-bold" data-section="how-i-think">About Me</a></li>
 					<li><a onclick="scrollToSection('contact-me')" class="desktop-nav-link navbar-link text-bold" data-section="contact-me">Contact Me</a></li>
 				</ul>
 			</div>
@@ -66,18 +66,18 @@
 						</div>
 					</div>
 					
-					<!-- Navigation Buttons -->
-					<div id="nav-buttons" class="flex flex-col md:flex-row max-w-4xl mx-auto bg-base-100 lg:rounded-full rounded-3xl overflow-hidden shadow-md">
-						<button onclick="scrollToSection('featured-work')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="featured-work">
-							Featured Work
-						</button>
-						<button onclick="scrollToSection('how-i-think')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="how-i-think">
-							Qualifications
-						</button>
-						<button onclick="scrollToSection('contact-me')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="contact-me">
-							Contact Me
-						</button>
-					</div>
+				<!-- Navigation Buttons -->
+				<div id="nav-buttons" class="flex flex-col md:flex-row max-w-4xl mx-auto bg-base-100 lg:rounded-full rounded-3xl overflow-hidden shadow-md">
+					<button onclick="scrollToSection('featured-work')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="featured-work">
+						Featured Work
+					</button>
+					<button onclick="scrollToSection('how-i-think')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="how-i-think">
+						About Me
+					</button>
+					<button onclick="scrollToSection('contact-me')" class="flex-1 py-6 px-8 text-neutral text-lg font-bold hover:underline hover:decoration-warning hover:decoration-2 hover:underline-offset-4 transition-all duration-200" data-section="contact-me">
+						Contact Me
+					</button>
+				</div>
 
 				
 				</div>
@@ -171,91 +171,83 @@
 					
 				</div>
 			</div>
-			<div id="how-i-think" class="calc-height bg-base-100 flex pt-16 lg:pt-0 flex flex-col justify-center items-center">
-				<div class="container px-4 lg:px-8 mx-auto h-full py-10">
-					<h2 class="text-neutral text-4xl font-bold text-center">Qualifications</h2>
-					<div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-10 w-full">
-						<div class="col-span-1">
-							<div class="card bg-white pb-10 w-full h-full mb-6">
-								<div class="card-body">
-									<h3 class="text-neutral text-3xl font-bold mt-4">Current Roles</h3>
-									<h4 class="card-title text-2xl text-warning">Web UX/UI Designer</h4>
-									<div>
-										<p class="text-xl mb-2">Utah State University, IT Web Team</p>
-										<p>Lead UX/UI strategy and redesigns across 50+ university sub-sites by gathering stakeholder input, defining user goals, and translating needs into accessible, brand-compliant digital solutions.</p>
-									</div>
-
-									<h4 class="card-title text-2xl text-warning mt-6">Adjunct Instructor | Intro to Web Dev & UX/UI</h4>
-
-									<div>
-										<p class="text-xl mb-2">Utah State Unversity, Huntsman School of Business</p>
-										<p>Teach UX/UI and web development fundamentals to ~20 students per semester, emphasizing user-centered design, accessibility, and modern web standards through practical, real-world projects.</p>
-									</div>
-								</div>
-							</div>
+		<div id="how-i-think" class="calc-height flex pt-16 lg:pt-0 flex flex-col justify-center items-center relative overflow-hidden pattern-background">
+			<div class="container px-4 lg:px-8 mx-auto h-full py-10">
+				<h2 class="text-neutral text-4xl font-bold text-center mb-8">About Me</h2>
+				
+				<!-- First row of 3 cards -->
+				<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mb-6">
+					<!-- Card 1 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							1
 						</div>
-						<div class="col-span-1">
-							<h3 class="text-neutral text-3xl font-bold mb-6 mt-4">Languages & Frameworks</h3>
-							<div class="flex flex-row gap-3 flex-wrap">
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">HTML</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">CSS</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">JavaScript</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">React</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">SQL</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">Node.js</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">PHP</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">Python</h4>
-								</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I see UX as a form of creativity and craft</h3>
+						<p class="text-neutral leading-relaxed">
+							For me, UX is art with intention. It is expression, clarity, and storytelling all at once. I love taking ideas, behaviors, and uncertainty and shaping them into experiences that feel natural, thoughtful, and genuinely enjoyable to use.
+						</p>
+					</div>
 
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">Vue</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">C++</h4>
-								</div>
-								<div class="bg-white rounded-lg p-4">
-									<h4 class="text-warning text-2xl font-bold">Java</h4>
-								</div>
-							</div>
-							<h3 class="text-neutral text-3xl font-bold mt-10 mb-6">Certifications</h3>
-
-							<div class="bg-white rounded-lg">
-								<div class="flex flex-row">
-									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
-										<i class="fa-solid fa-award text-white text-2xl"></i>
-									</div>
-
-									<h3 class="text-neutral text-2xl font-bold p-4">UX/UI Certification - Nielsen Norman Group</h3>
-								</div>
-							</div>
-							<div class="bg-white rounded-lg mt-4">
-								<div class="flex flex-row">
-									<div class="flex flex-col justify-center items-center bg-warning rounded-l p-4">
-										<i class="fa-solid fa-award text-white text-2xl"></i>
-									</div>
-
-									<h3 class="text-neutral text-2xl font-bold p-4">Web Accessibility Certification - WebAIM</h3>
-								</div>
-							</div>
+					<!-- Card 2 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							2
 						</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I moved from solving technical puzzles to human ones</h3>
+						<p class="text-neutral leading-relaxed">
+							I earned a degree in computer science, which gives me a strong technical foundation and helps me design with real build constraints in mind. But I found that my spark comes from debugging human experiences, not just code.
+						</p>
+					</div>
+
+					<!-- Card 3 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							3
+						</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I bring energy, curiosity, and a little chaos-brain fun</h3>
+						<p class="text-neutral leading-relaxed">
+							I ask the random questions, I explore weird ideas, and I genuinely enjoy collaboration. Teams move faster when they are having a good time.
+						</p>
+					</div>
+				</div>
+
+				<!-- Second row of 3 cards -->
+				<div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+					<!-- Card 4 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							4
+						</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I believe great UX is part structure, part creativity</h3>
+						<p class="text-neutral leading-relaxed">
+							I build systems and patterns that scale, then layer personality and story on top so the experience feels human, not mechanical.
+						</p>
+					</div>
+
+					<!-- Card 5 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							5
+						</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I find joy in discovering the answers</h3>
+						<p class="text-neutral leading-relaxed">
+							I might not know the answer, but I'm happy to find out. I love learning, exploring possibilities, and uncovering insight along the way. Curiosity makes the work fun—and the solutions better.
+						</p>
+					</div>
+
+					<!-- Card 6 -->
+					<div class="bg-white/80 backdrop-blur-md rounded-3xl p-6">
+						<div class="bg-warning text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mb-4">
+							6
+						</div>
+						<h3 class="text-neutral text-2xl font-bold mb-4">I love the moment when everything finally clicks</h3>
+						<p class="text-neutral leading-relaxed">
+							Research, iteration, and thoughtful design are how I get there, but the magic is seeing someone use something and say, "Oh, that is easy."
+						</p>
 					</div>
 				</div>
 			</div>
+		</div>
 			<div id="contact-me" class="bg-white calc-height py-16 lg:py-0 flex flex-col justify-center items-center">
 				<div class="container py-10 lg:py-10 px-4 lg:px-8 mx-auto">
 					<div class="grid grid-cols-3 gap-8 w-full pb-10 lg:pb-0 md:pb-0">
