@@ -1163,6 +1163,13 @@
     font-size: var(--cardtitle-fs, 1.125rem);
     font-weight: 600;
   }
+  .mask {
+    display: inline-block;
+    vertical-align: middle;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
   .flex {
     display: flex;
   }
@@ -1432,9 +1439,6 @@
   }
   .bg-center {
     background-position: center;
-  }
-  .mask-repeat {
-    mask-repeat: repeat;
   }
   .object-cover {
     object-fit: cover;
