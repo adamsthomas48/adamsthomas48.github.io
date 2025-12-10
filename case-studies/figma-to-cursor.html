@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html data-theme="nord" class="scroll-smooth overflow-x-hidden" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link href="/src/styles.css" rel="stylesheet" />
+		<title>Figma to Cursor to Modern Campus CMS - Case Study | Adam Thomas</title>
+		<meta http-equiv="Content-Language" content="en" />
+		<meta name="language" content="English" />
+		<meta name="description" content="Case study: Building a design system and automation pipeline to transform stakeholder communication and reduce page build time by 75%." />
+		<meta name="keywords" content="Adam Thomas, case study, UX/UI design, design systems, Figma, Cursor, automation, Modern Campus CMS" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://adamsthomas48.github.io/case-studies/figma-to-cursor.html" />
+		<meta property="og:title" content="Figma to Cursor to Modern Campus CMS - Case Study | Adam Thomas" />
+		<meta property="og:description" content="Case study: Building a design system and automation pipeline to transform stakeholder communication and reduce page build time by 75%." />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://adamsthomas48.github.io/case-studies/figma-to-cursor.html" />
+		<meta name="twitter:title" content="Figma to Cursor to Modern Campus CMS - Case Study | Adam Thomas" />
+		<meta name="twitter:description" content="Case study: Building a design system and automation pipeline to transform stakeholder communication and reduce page build time by 75%." />
+		
+		<script src="https://kit.fontawesome.com/70a27bc01a.js" crossorigin="anonymous"></script>
+		<link rel="icon" href="/assets/at-logo-orange-square.svg" />
+	</head>
+
+	<body class="bg-base-100 overflow-x-hidden">
+		<!-- Navigation -->
+		<div class="navbar bg-base-100 fixed top-0 z-50 w-full shadow-sm">
+			<div class="navbar-start">
+				<div class="dropdown">
+					<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+						</svg>
+					</div>
+					<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+						<li><a href="#overview">Project Overview</a></li>
+						<li><a href="#problem">The Problem</a></li>
+						<li><a href="#figma-system">Figma Design System</a></li>
+						<li><a href="#cursor">Cursor Integration</a></li>
+						<li><a href="#impact">Impact</a></li>
+						<li><a href="#reflection">Reflection</a></li>
+					</ul>
+				</div>
+				<a href="/index.html#featured-work" data-section="featured-work" class="btn btn-ghost hover:text-warning text-sm font-bold">
+					<i class="fa-solid fa-chevron-left text-xs mr-2"></i>
+					Back to Portfolio
+				</a>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1 gap-4">
+					<li><a href="#overview" class="navbar-link text-bold">Project Overview</a></li>
+					<li><a href="#problem" class="navbar-link text-bold">The Problem</a></li>
+					<li><a href="#figma-system" class="navbar-link text-bold">Figma Design System</a></li>
+					<li><a href="#cursor" class="navbar-link text-bold">Cursor Integration</a></li>
+					<li><a href="#impact" class="navbar-link text-bold">Impact</a></li>
+					<li><a href="#reflection" class="navbar-link text-bold">Reflection</a></li>
+				</ul>
+			</div>
+			<div class="navbar-end pr-4">
+				<a href="mailto:adamthomas.atx@gmail.com" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-solid fa-envelope"></i><span class="sr-only">Email</span> </a>
+				<a href="https://www.linkedin.com/in/adamsthomas48/" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-brands fa-linkedin"></i><span class="sr-only">LinkedIn</span> </a>
+				<a href="https://github.com/adamsthomas48" target="_blank" rel="noopener noreferrer" class="text-base px-2 text-[20px] font-bold hover:scale-110 hover:text-warning transition-all duration-300"> <i class="fa-brands fa-github"></i><span class="sr-only">GitHub</span> </a>
+			</div>
+		</div>
+
+		<!-- Main Content -->
+		<div class="pt-16 overflow-x-hidden w-full">
+			<!-- Hero Section -->
+			<section class="bg-white py-20  overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-7xl mx-auto">
+						<!-- Hero Content with 2/3 text and 1/3 image -->
+						<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center mb-16 min-h-[50vh]">
+							<!-- Left side - Text content (2/3) -->
+							<div class="lg:col-span-2">
+								<!-- Breadcrumbs -->
+								<div class="mb-4 animate-on-scroll">
+									<p class="text-neutral text-sm font-normal">UX Design • Systems Design</p>
+								</div>
+
+								<!-- Title and Subtitle -->
+								<div class="animate-on-scroll delay-200">
+									<h1 class="font-bold text-warning text-4xl lg:text-5xl mb-4">AI-Powered Design and Build System</h1>
+									<p class="font-normal text-neutral text-lg lg:text-xl leading-relaxed">
+										How I built a design system in Figma and anutomation pipeline with Cursor to transform stakeholder communication and reduce page build time by 75%.
+									</p>
+								</div>
+							</div>
+
+							<!-- Right side - Image (1/3) -->
+							<div class="lg:col-span-1 animate-on-scroll delay-300">
+								<lottie-player 
+								id="p10-lottie"
+								class="w-full max-w-lg lottie-scroll-play" 
+								src="/assets/figma-cursor-flow.json" 
+								background="transparent" 
+								speed="1.5"
+								loop>
+							</lottie-player>
+							</div>
+						</div>
+
+						<!-- Key Metrics Section -->
+						<div class="border-t border-gray-300 pt-8 pb-8">
+							<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+								<div class="text-center animate-on-scroll delay-100">
+									<div class="text-4xl lg:text-5xl font-bold text-neutral mb-2">75%</div>
+									<p class="text-neutral text-sm lg:text-base font-normal">Reduction in page build time</p>
+								</div>
+								<div class="text-center animate-on-scroll delay-200">
+									<div class="text-4xl lg:text-5xl font-bold text-neutral mb-2">~2min</div>
+									<p class="text-neutral text-sm lg:text-base font-normal">to generate a complete page</p>
+								</div>
+								<div class="text-center animate-on-scroll delay-300">
+									<div class="text-4xl lg:text-5xl font-bold text-neutral mb-2">75+</div>
+									<p class="text-neutral text-sm lg:text-base font-normal">University websites supported</p>
+								</div>
+								<div class="text-center animate-on-scroll delay-400">
+									<div class="text-4xl lg:text-5xl font-bold text-neutral mb-2">90%</div>
+									<p class="text-neutral text-sm lg:text-base font-normal">Work automated via Cursor</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Project Overview Section -->
+			<section id="overview" class="bg-white py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-6">Project Overview</h2>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								Utah State University manages a large digital ecosystem. Our central IT Web Team directly maintains more than 75 university websites and supports dozens of additional editors and webmasters across campus. Any update to these supported sites filters through our small team, which means meticulous efficiency and clarity are essential.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								As a UX Designer and Project Manager on this team, I helped stakeholders from colleges, departments and administrative units to understand their needs, translate ideas into wireframes and guide our students through the various UI/UX courses. Being on this team, I noticed a recurring challenge: most stakeholders have little experience with design or web development, yet they make critical decisions about their digital content.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed">
+								This case study is the story of how I addressed these challenges by introducing a design system in Figma and building a code automation workflow using Cursor and the Modern Campus CMS.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- The Problem Section -->
+			<section id="problem" class="bg-white py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-4">The Problem</h2>
+							<p class="font-bold text-neutral text-lg mb-6">Two major friction points slowed our work.</p>
+							
+							<ol class="list-decimal list-inside space-y-4 mb-8 ml-4">
+								<li class="font-normal text-neutral text-base leading-relaxed">
+									First, stakeholders struggled to understand wireframes or textual documentation. Without a clear visual, conversations drifted and content drafts came in as long, dense paragraphs.
+								</li>
+								<li class="font-normal text-neutral text-base leading-relaxed">
+									Second, even when we agreed on a solution, building it manually in the CMS was slow. Each page required custom markup, component configuration and CMS-specific elements. Random HTML was common.
+								</li>
+							</ol>
+
+							<h3 class="font-bold text-neutral text-xl mb-6 mt-8">Our team needed a way to:</h3>
+							
+							<!-- Solution Cards -->
+							<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+								<div class="bg-gray-100 border border-gray-200 rounded-lg p-6 animate-on-scroll delay-100">
+									<div class="mb-4">
+										<i class="fa-solid fa-pencil text-warning text-2xl"></i>
+									</div>
+									<p class="font-normal text-neutral text-sm">Translate ideas quickly and visually</p>
+								</div>
+								<div class="bg-gray-100 border border-gray-200 rounded-lg p-6 animate-on-scroll delay-200">
+									<div class="mb-4">
+										<i class="fa-solid fa-people-group text-warning text-2xl"></i>
+									</div>
+									<p class="font-normal text-neutral text-sm">Iterate in real time with stakeholders</p>
+								</div>
+								<div class="bg-gray-100 border border-gray-200 rounded-lg p-6 animate-on-scroll delay-300">
+									<div class="mb-4">
+										<i class="fa-solid fa-clock text-warning text-2xl"></i>
+									</div>
+									<p class="font-normal text-neutral text-sm">Reduce manual build time inside the CMS</p>
+								</div>
+								<div class="bg-gray-100 border border-gray-200 rounded-lg p-6 animate-on-scroll delay-400">
+									<div class="mb-4">
+										<i class="fa-solid fa-code text-warning text-2xl"></i>
+									</div>
+									<p class="font-normal text-neutral text-sm">Produce consistent, accessible code at scale</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Building a Figma Design System Section -->
+			<section id="figma-system" class="bg-white py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-6">Building a Figma Design System</h2>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								Before I joined, the web team did not use Figma or any dedicated design tool. Pages were designed directly inside the CMS, which meant every change required development effort and every random site got projects done.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-6">
+								I introduced Figma as a lightweight foundation tool. The goal was not pixel-perfect mockups. The goal was speed, clarity and a shared mental model.
+							</p>
+							
+							<!-- Bulleted List Box -->
+							<div class="bg-gray-100 rounded-lg p-6 mb-6 animate-on-scroll delay-200">
+								<ul class="list-disc list-inside space-y-2 ml-4">
+									<li class="font-normal text-neutral text-base">Stakeholders finally understood web patterns and constraints</li>
+									<li class="font-normal text-neutral text-base">Meetings became collaborative instead of conceptual</li>
+									<li class="font-normal text-neutral text-base">Content quickly improved because people could now refer to a structure</li>
+									<li class="font-normal text-neutral text-base">Designers and developers could iterate without touching the CMS</li>
+								</ul>
+							</div>
+							
+							<p class="font-normal text-neutral text-base leading-relaxed">
+								For the first time, everyone had a shared language.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Extending the System with Cursor Section -->
+			<section id="cursor" class="bg-white py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-6">Extending the System with Cursor</h2>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								Design reality was bittersweet, but build time was still a bottleneck. The Modern Campus CMS requires unique markup, encoded component structures and custom CSS/JS support. Translating Figma into production pages was a slow process.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-6">
+								To bridge that gap, I created a set of Cursor rules that act as a component map between our Figma system and our CMS implementation.
+							</p>
+							
+							<!-- Bulleted List Box -->
+							<div class="bg-gray-100 rounded-lg p-6 mb-6 animate-on-scroll delay-200">
+								<ul class="list-disc list-inside space-y-2 ml-4">
+									<li class="font-normal text-neutral text-base">How each Figma component should translate to Bootstrap and custom CSS</li>
+									<li class="font-normal text-neutral text-base">How CMS-only regions should be parsed</li>
+									<li class="font-normal text-neutral text-base">How Modern Campus components output encoded as templates</li>
+									<li class="font-normal text-neutral text-base">How to assemble full pages from linked design files</li>
+								</ul>
+							</div>
+							
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								With the Figma MCP integration, I can now paste a Figma design into Cursor and say "Build this page." Cursor parses the design, exports HTML and publishes a nearly complete page.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								The result: about 90 percent of the work is now automated in roughly two minutes. Our team now publishes pages with minimal refinements like linking media assets.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed">
+								This also transformed how we handle existing pages. Instead of manually updating dozens of pages or layout sections one by one, Cursor can regenerate updated components instantly.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Impact Section -->
+			<section id="impact" class="bg-gray-100 py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="text-center mb-12 animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-6">Impact</h2>
+						</div>
+						
+						<!-- Feature Cards Grid -->
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 animate-on-scroll delay-100">
+								<h3 class="font-bold text-neutral text-xl mb-3">Speed</h3>
+								<p class="font-normal text-neutral text-base leading-relaxed">
+									Pages that once took hours now take minutes. Iteration is simple because updating a design and regenerating code is quick.
+								</p>
+							</div>
+							<div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 animate-on-scroll delay-200">
+								<h3 class="font-bold text-neutral text-xl mb-3">Consistency</h3>
+								<p class="font-normal text-neutral text-base leading-relaxed">
+									Using a tagged system ensures accessible, standardized code across all sites.
+								</p>
+							</div>
+							<div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 animate-on-scroll delay-300">
+								<h3 class="font-bold text-neutral text-xl mb-3">Better Content</h3>
+								<p class="font-normal text-neutral text-base leading-relaxed">
+									Stakeholders produce clearer, accessible content when they can see the structure before writing.
+								</p>
+							</div>
+							<div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 animate-on-scroll delay-400">
+								<h3 class="font-bold text-neutral text-xl mb-3">Scalability</h3>
+								<p class="font-normal text-neutral text-base leading-relaxed">
+									With over 75 sites to manage, these gains compound. Our small team can support a much larger ecosystem without sacrificing quality.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Reflection Section -->
+			<section id="reflection" class="bg-white py-20 overflow-x-hidden">
+				<div class="container mx-auto px-4 lg:px-36">
+					<div class="max-w-5xl mx-auto">
+						<div class="animate-on-scroll">
+							<h2 class="font-bold text-warning text-3xl mb-6">Reflection</h2>
+							<p class="font-normal text-neutral text-base leading-relaxed mb-4">
+								Introducing Figma helped solve our communication challenge. Building the automation pipeline with Cursor solved our scale challenge. Combined, these systems allow our team to work more efficiently, collaborate more effectively and ship changes much faster.
+							</p>
+							<p class="font-normal text-neutral text-base leading-relaxed">
+								I've learned new methods to work both inside a workflow, design solutions that fit the real constraints of a team and create tools that amplify everyone's output. It demonstrated the value of bringing UX thinking not only to interfaces, but to internal systems and processes.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<script src="/src/script.js"></script>
+		<script>
+			// Smooth scrolling with offset for fixed navbar
+			function scrollToSection(sectionId) {
+				const element = document.getElementById(sectionId);
+				if (element) {
+					const navbarHeight = 64; // Height of the fixed navbar
+					const elementPosition = element.offsetTop - navbarHeight;
+					window.scrollTo({
+						top: elementPosition,
+						behavior: "smooth",
+					});
+				}
+			}
+
+			// Scroll animation observer
+			function initScrollAnimations() {
+				const animatedElements = document.querySelectorAll(".animate-on-scroll, .animate-slide-left, .animate-slide-right, .animate-fade-in");
+
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("animate-in");
+							}
+						});
+					},
+					{
+						threshold: 0.1,
+						rootMargin: "0px 0px -50px 0px",
+					}
+				);
+
+				animatedElements.forEach((element) => {
+					observer.observe(element);
+				});
+			}
+
+			// Add click handlers to navigation links
+			document.addEventListener("DOMContentLoaded", function () {
+				// Initialize scroll animations
+				initScrollAnimations();
+
+				// Handle desktop navigation links
+				const navLinks = document.querySelectorAll('.navbar-link[href^="#"]');
+				navLinks.forEach((link) => {
+					link.addEventListener("click", function (e) {
+						e.preventDefault();
+						const sectionId = this.getAttribute("href").substring(1);
+						scrollToSection(sectionId);
+					});
+				});
+
+				// Handle mobile navigation links
+				const mobileLinks = document.querySelectorAll('.menu a[href^="#"]');
+				mobileLinks.forEach((link) => {
+					link.addEventListener("click", function (e) {
+						e.preventDefault();
+						const sectionId = this.getAttribute("href").substring(1);
+						scrollToSection(sectionId);
+					});
+				});
+			});
+		</script>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	</body>
+</html>
