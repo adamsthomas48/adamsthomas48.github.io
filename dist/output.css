@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -16,6 +16,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-lg: 32rem;
+    --container-3xl: 48rem;
     --container-4xl: 56rem;
     --container-5xl: 64rem;
     --container-7xl: 80rem;
@@ -1167,9 +1168,6 @@
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
-  .h-\[75vh\] {
-    height: 75vh;
-  }
   .h-\[400px\] {
     height: 400px;
   }
@@ -1187,12 +1185,6 @@
   }
   .min-h-\[50vh\] {
     min-height: 50vh;
-  }
-  .min-h-\[55vh\] {
-    min-height: 55vh;
-  }
-  .min-h-\[75vh\] {
-    min-height: 75vh;
   }
   .min-h-\[400px\] {
     min-height: 400px;
@@ -1230,6 +1222,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
   .max-w-4xl {
     max-width: var(--container-4xl);
   }
@@ -1256,22 +1251,6 @@
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
-  }
-  .link {
-    cursor: pointer;
-    text-decoration-line: underline;
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
-      @media (forced-colors: active) {
-        outline: 2px solid transparent;
-        outline-offset: 2px;
-      }
-    }
-    &:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 2px;
-    }
   }
   .cursor-pointer {
     cursor: pointer;
@@ -1521,12 +1500,6 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
-  }
-  .py-30 {
-    padding-block: calc(var(--spacing) * 30);
-  }
-  .py-40 {
-    padding-block: calc(var(--spacing) * 40);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -1845,11 +1818,6 @@
       @media (hover: hover) {
         text-underline-offset: 4px;
       }
-    }
-  }
-  .disabled\:opacity-50 {
-    &:disabled {
-      opacity: 50%;
     }
   }
   .md\:order-1 {
